@@ -12,6 +12,8 @@ namespace AGVWebAPI.Controller
 {
     public class AlertController : ApiController
     {
+        AGVStagingContext agvStagingContext = new AGVStagingContext();
+
         public async void Post()
         {
             string alertXML = await Request.Content.ReadAsStringAsync();
@@ -24,7 +26,7 @@ namespace AGVWebAPI.Controller
             Staging_Alert alert = xmlHandler.MapXmlToStagingAlert(alertXML);
 
             // alert model AddAlert()
-
+            agvStagingContext.AddAlert(alert);
         }
     }
 }
