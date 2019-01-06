@@ -73,8 +73,7 @@ namespace WebApplication1
                 .IsUnicode(false);
 
             modelBuilder.Entity<Staging_Alert>()
-                .Property(e => e.TimeStamp)
-                .IsFixedLength();
+                .Property(e => e.TimeStamp);
 
             modelBuilder.Entity<Staging_Customer>()
                 .Property(e => e.CustomerName)

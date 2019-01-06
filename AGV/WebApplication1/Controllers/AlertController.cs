@@ -18,14 +18,9 @@ namespace AGVWebAPI.Controller
 
             // xml validation to xsd
 
-            // timestamp handler
+            // xml string to Model
             XMLHandler xmlHandler = new XMLHandler();
 
-            //string timestamp = xmlHandler.getBetween(alertXML, "<TimeStamp>", "</TimeStamp>");
-            //string newTimestamp = timestamp.
-            // xml string to Model
-
-            alertXML = alertXML.Replace("-", "=");
             Staging_Alert alert = xmlHandler.MapXmlToStagingAlert(alertXML);
 
             // alert model AddAlert()

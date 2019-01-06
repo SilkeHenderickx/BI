@@ -17,10 +17,10 @@ namespace WebApplication1
         [StringLength(10)]
         public string Identification { get; set; }
 
-        [Column(TypeName = "date")]
+        [Column(TypeName = "datetime2")]
         public DateTime InProductionDate { get; set; }
 
-        [Column(TypeName = "date")]
+        [Column(TypeName = "datetime2")]
         public DateTime? OutProductionDate { get; set; }
 
         public virtual Staging_Customer Staging_Customer { get; set; }

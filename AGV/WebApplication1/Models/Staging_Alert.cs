@@ -16,12 +16,10 @@ namespace WebApplication1
         [Required]
         [StringLength(50)]
         public string AlertType { get; set; }
-
+        
         [Key]
-        [Column(Order = 1, TypeName = "timestamp")]
-        [MaxLength(8)]
-        [Timestamp]
-        public byte[] TimeStamp { get; set; }
+        [Column(Order = 1, TypeName = "datetime2")]
+        public DateTime TimeStamp { get; set; }
 
         public byte Blocked { get; set; }
 
