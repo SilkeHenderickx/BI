@@ -14,19 +14,29 @@ namespace AGVWebAPI.Controller
     {
         AGVStagingContext agvStagingContext = new AGVStagingContext();
 
-        public async void Post()
+        public async Task<HttpResponseMessage> Post()
         {
             string alertXML = await Request.Content.ReadAsStringAsync();
 
-            // xml validation to xsd
+            try
+            {
+                // xml validation to xsd
 
-            // xml string to Model
-            XMLHandler xmlHandler = new XMLHandler();
+                // xml string to Model
+                XMLHandler xmlHandler = new XMLHandler();
 
-            Staging_Alert alert = xmlHandler.MapXmlToStagingAlert(alertXML);
+                Staging_Alert alert = xmlHandler.MapXmlToStagingAlert(alertXML);
 
-            // alert model AddAlert()
-            agvStagingContext.AddAlert(alert);
+                // alert model AddAlert()
+                agvStagingContext.AddAlert(alert);
+
+                return Request.CreateResponse(HttpStatusCode.OK);
+            }
+            catch (Exception e)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest,
+                    "The given data did not match what was expected.");
+            }
         }
     }
 }
