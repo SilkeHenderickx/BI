@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="12/10/2018 3:40:42 PM"
@@ -11,8 +11,8 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="5"
-  DTS:VersionGUID="{C9EC029F-0F6F-4EE2-BF80-D27B85189696}">
+  DTS:VersionBuild="40"
+  DTS:VersionGUID="{5080282F-3E19-454A-9528-A3664CD6D608}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -36,17 +36,57 @@
           DTS:ConnectionString="Data Source=(local);Initial Catalog=AGV_StagingArea;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{63967B5D-7B86-4E73-8700-619BC7898883}"
+      DTS:ObjectName="Excel Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Silke\Google Drive\BI\Data\Excells\AGVs.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 1]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{E6245E4A-5372-47ED-AE40-79ADEFCC30C5}"
+      DTS:ObjectName="Excel Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Silke\Google Drive\BI\Data\Excells\AlertDescriptions.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 2]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{3448B6B0-0887-4EAF-970F-119D4C95F69D}"
+      DTS:ObjectName="Excel Connection Manager 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Silke\Google Drive\BI\Data\Excells\Customers.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 3]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{42DB8038-A76A-48A8-B744-421714181CBF}"
+      DTS:ObjectName="Excel Connection Manager 3">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Silke\Google Drive\BI\Data\Excells\SpeedCategories.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Insert XMLs"
+      DTS:refId="Package\AlertDescriptions"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{2DB0407B-2497-4BE3-BEAA-1B19D70C93A4}"
+      DTS:DTSID="{FD79B62B-FF90-4289-ACC9-2603EB2A2A9E}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Insert XMLs"
+      DTS:ObjectName="AlertDescriptions"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -54,7 +94,162 @@
           version="1">
           <components>
             <component
-              refId="Package\Insert XMLs\OLE DB Destination"
+              refId="Package\AlertDescriptions\Excel AlertDescriptions"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Excel AlertDescriptions"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">Sheet1$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\AlertDescriptions\Excel AlertDescriptions.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\AlertDescriptions\Excel AlertDescriptions.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\AlertDescriptions\Excel AlertDescriptions.Outputs[Excel Source Output].Columns[AlertDescription]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\AlertDescriptions\Excel AlertDescriptions.Outputs[Excel Source Output].ExternalColumns[AlertDescription]"
+                      length="255"
+                      lineageId="Package\AlertDescriptions\Excel AlertDescriptions.Outputs[Excel Source Output].Columns[AlertDescription]"
+                      name="AlertDescription"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\AlertDescriptions\Excel AlertDescriptions.Outputs[Excel Source Output].Columns[Environmental]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\AlertDescriptions\Excel AlertDescriptions.Outputs[Excel Source Output].ExternalColumns[Environmental]"
+                      lineageId="Package\AlertDescriptions\Excel AlertDescriptions.Outputs[Excel Source Output].Columns[Environmental]"
+                      name="Environmental"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\AlertDescriptions\Excel AlertDescriptions.Outputs[Excel Source Output].Columns[Blocking]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\AlertDescriptions\Excel AlertDescriptions.Outputs[Excel Source Output].ExternalColumns[Blocking]"
+                      lineageId="Package\AlertDescriptions\Excel AlertDescriptions.Outputs[Excel Source Output].Columns[Blocking]"
+                      name="Blocking"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\AlertDescriptions\Excel AlertDescriptions.Outputs[Excel Source Output].Columns[Id]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\AlertDescriptions\Excel AlertDescriptions.Outputs[Excel Source Output].ExternalColumns[Id]"
+                      lineageId="Package\AlertDescriptions\Excel AlertDescriptions.Outputs[Excel Source Output].Columns[Id]"
+                      name="Id"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\AlertDescriptions\Excel AlertDescriptions.Outputs[Excel Source Output].ExternalColumns[AlertDescription]"
+                      dataType="wstr"
+                      length="255"
+                      name="AlertDescription" />
+                    <externalMetadataColumn
+                      refId="Package\AlertDescriptions\Excel AlertDescriptions.Outputs[Excel Source Output].ExternalColumns[Environmental]"
+                      dataType="r8"
+                      name="Environmental" />
+                    <externalMetadataColumn
+                      refId="Package\AlertDescriptions\Excel AlertDescriptions.Outputs[Excel Source Output].ExternalColumns[Blocking]"
+                      dataType="r8"
+                      name="Blocking" />
+                    <externalMetadataColumn
+                      refId="Package\AlertDescriptions\Excel AlertDescriptions.Outputs[Excel Source Output].ExternalColumns[Id]"
+                      dataType="r8"
+                      name="Id" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\AlertDescriptions\Excel AlertDescriptions.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\AlertDescriptions\Excel AlertDescriptions.Outputs[Excel Source Error Output].Columns[Id]"
+                      dataType="r8"
+                      lineageId="Package\AlertDescriptions\Excel AlertDescriptions.Outputs[Excel Source Error Output].Columns[Id]"
+                      name="Id" />
+                    <outputColumn
+                      refId="Package\AlertDescriptions\Excel AlertDescriptions.Outputs[Excel Source Error Output].Columns[AlertDescription]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\AlertDescriptions\Excel AlertDescriptions.Outputs[Excel Source Error Output].Columns[AlertDescription]"
+                      name="AlertDescription" />
+                    <outputColumn
+                      refId="Package\AlertDescriptions\Excel AlertDescriptions.Outputs[Excel Source Error Output].Columns[Environmental]"
+                      dataType="r8"
+                      lineageId="Package\AlertDescriptions\Excel AlertDescriptions.Outputs[Excel Source Error Output].Columns[Environmental]"
+                      name="Environmental" />
+                    <outputColumn
+                      refId="Package\AlertDescriptions\Excel AlertDescriptions.Outputs[Excel Source Error Output].Columns[Blocking]"
+                      dataType="r8"
+                      lineageId="Package\AlertDescriptions\Excel AlertDescriptions.Outputs[Excel Source Error Output].Columns[Blocking]"
+                      name="Blocking" />
+                    <outputColumn
+                      refId="Package\AlertDescriptions\Excel AlertDescriptions.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\AlertDescriptions\Excel AlertDescriptions.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\AlertDescriptions\Excel AlertDescriptions.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\AlertDescriptions\Excel AlertDescriptions.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\AlertDescriptions\OLE DB Destination"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
@@ -69,7 +264,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[Staging_Alert]</property>
+                  name="OpenRowset">[dbo].[Staging_AlertDescription]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -99,7 +294,7 @@
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
+                  name="FastLoadKeepNulls">true</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
@@ -111,7 +306,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Insert XMLs\OLE DB Destination.Connections[OleDbConnection]"
+                  refId="Package\AlertDescriptions\OLE DB Destination.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[(local).AGV_StagingArea]"
                   connectionManagerRefId="Package.ConnectionManagers[(local).AGV_StagingArea]"
                   description="The OLE DB runtime connection used to access the database."
@@ -119,142 +314,78 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Insert XMLs\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  refId="Package\AlertDescriptions\OLE DB Destination.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
-                  errorRowDisposition="IgnoreFailure"
+                  errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Insert XMLs\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AGVAlert.AGV]"
-                      cachedDataType="i8"
-                      cachedName="AGVAlert.AGV"
-                      externalMetadataColumnId="Package\Insert XMLs\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AGV]"
-                      lineageId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].Columns[AGVAlert.AGV]" />
+                      refId="Package\AlertDescriptions\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AlertDescription]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="AlertDescription"
+                      externalMetadataColumnId="Package\AlertDescriptions\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AlertDescription]"
+                      lineageId="Package\AlertDescriptions\Excel AlertDescriptions.Outputs[Excel Source Output].Columns[AlertDescription]" />
                     <inputColumn
-                      refId="Package\Insert XMLs\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AGVAlert.AlertType]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="108"
-                      cachedName="AGVAlert.AlertType"
-                      externalMetadataColumnId="Package\Insert XMLs\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AlertType]"
-                      lineageId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].Columns[AGVAlert.AlertType]" />
+                      refId="Package\AlertDescriptions\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Environmental]"
+                      cachedDataType="r8"
+                      cachedName="Environmental"
+                      externalMetadataColumnId="Package\AlertDescriptions\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Environmental]"
+                      lineageId="Package\AlertDescriptions\Excel AlertDescriptions.Outputs[Excel Source Output].Columns[Environmental]" />
                     <inputColumn
-                      refId="Package\Insert XMLs\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AGVAlert.TimeStamp]"
-                      cachedDataType="dbTime2"
-                      cachedName="AGVAlert.TimeStamp"
-                      cachedScale="7"
-                      externalMetadataColumnId="Package\Insert XMLs\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TimeStamp]"
-                      lineageId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].Columns[AGVAlert.TimeStamp]" />
+                      refId="Package\AlertDescriptions\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Blocking]"
+                      cachedDataType="r8"
+                      cachedName="Blocking"
+                      externalMetadataColumnId="Package\AlertDescriptions\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Blocking]"
+                      lineageId="Package\AlertDescriptions\Excel AlertDescriptions.Outputs[Excel Source Output].Columns[Blocking]" />
                     <inputColumn
-                      refId="Package\Insert XMLs\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AGVAlert.Blocked]"
-                      cachedDataType="i1"
-                      cachedName="AGVAlert.Blocked"
-                      externalMetadataColumnId="Package\Insert XMLs\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Blocked]"
-                      lineageId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].Columns[AGVAlert.Blocked]" />
-                    <inputColumn
-                      refId="Package\Insert XMLs\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AGVAlert.AGVJobKey]"
-                      cachedDataType="i8"
-                      cachedName="AGVAlert.AGVJobKey"
-                      externalMetadataColumnId="Package\Insert XMLs\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AGVJobKey]"
-                      lineageId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].Columns[AGVAlert.AGVJobKey]" />
-                    <inputColumn
-                      refId="Package\Insert XMLs\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AGVAlert.XLocation]"
-                      cachedDataType="i8"
-                      cachedName="AGVAlert.XLocation"
-                      externalMetadataColumnId="Package\Insert XMLs\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[XLocation]"
-                      lineageId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].Columns[AGVAlert.XLocation]" />
-                    <inputColumn
-                      refId="Package\Insert XMLs\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AGVAlert.YLocation]"
-                      cachedDataType="i8"
-                      cachedName="AGVAlert.YLocation"
-                      externalMetadataColumnId="Package\Insert XMLs\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[YLocation]"
-                      lineageId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].Columns[AGVAlert.YLocation]" />
-                    <inputColumn
-                      refId="Package\Insert XMLs\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AGVAlert.Direction]"
-                      cachedDataType="i8"
-                      cachedName="AGVAlert.Direction"
-                      externalMetadataColumnId="Package\Insert XMLs\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Direction]"
-                      lineageId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].Columns[AGVAlert.Direction]" />
-                    <inputColumn
-                      refId="Package\Insert XMLs\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AGVAlert.Speed]"
-                      cachedDataType="i8"
-                      cachedName="AGVAlert.Speed"
-                      externalMetadataColumnId="Package\Insert XMLs\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Speed]"
-                      lineageId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].Columns[AGVAlert.Speed]" />
-                    <inputColumn
-                      refId="Package\Insert XMLs\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AGVAlert.Loaded]"
-                      cachedDataType="i1"
-                      cachedName="AGVAlert.Loaded"
-                      externalMetadataColumnId="Package\Insert XMLs\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Loaded]"
-                      lineageId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].Columns[AGVAlert.Loaded]" />
+                      refId="Package\AlertDescriptions\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Id]"
+                      cachedDataType="r8"
+                      cachedName="Id"
+                      externalMetadataColumnId="Package\AlertDescriptions\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Id]"
+                      lineageId="Package\AlertDescriptions\Excel AlertDescriptions.Outputs[Excel Source Output].Columns[Id]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Insert XMLs\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AGV]"
+                      refId="Package\AlertDescriptions\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Id]"
                       dataType="i4"
-                      name="AGV" />
+                      name="Id" />
                     <externalMetadataColumn
-                      refId="Package\Insert XMLs\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AlertType]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\AlertDescriptions\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AlertDescription]"
+                      dataType="wstr"
                       length="50"
-                      name="AlertType" />
+                      name="AlertDescription" />
                     <externalMetadataColumn
-                      refId="Package\Insert XMLs\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TimeStamp]"
-                      dataType="dbTimeStamp2"
-                      name="TimeStamp"
-                      scale="7" />
-                    <externalMetadataColumn
-                      refId="Package\Insert XMLs\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Blocked]"
+                      refId="Package\AlertDescriptions\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Environmental]"
                       dataType="ui1"
-                      name="Blocked" />
+                      name="Environmental" />
                     <externalMetadataColumn
-                      refId="Package\Insert XMLs\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AGVJobKey]"
-                      dataType="i4"
-                      name="AGVJobKey" />
-                    <externalMetadataColumn
-                      refId="Package\Insert XMLs\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[XLocation]"
-                      dataType="i4"
-                      name="XLocation" />
-                    <externalMetadataColumn
-                      refId="Package\Insert XMLs\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[YLocation]"
-                      dataType="i4"
-                      name="YLocation" />
-                    <externalMetadataColumn
-                      refId="Package\Insert XMLs\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Direction]"
-                      dataType="i4"
-                      name="Direction" />
-                    <externalMetadataColumn
-                      refId="Package\Insert XMLs\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Speed]"
-                      dataType="i4"
-                      name="Speed" />
-                    <externalMetadataColumn
-                      refId="Package\Insert XMLs\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Loaded]"
+                      refId="Package\AlertDescriptions\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Blocking]"
                       dataType="ui1"
-                      name="Loaded" />
+                      name="Blocking" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Insert XMLs\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\AlertDescriptions\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Insert XMLs\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\AlertDescriptions\OLE DB Destination.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Insert XMLs\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\AlertDescriptions\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Insert XMLs\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\AlertDescriptions\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Insert XMLs\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\AlertDescriptions\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Insert XMLs\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\AlertDescriptions\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -262,12 +393,37 @@
                 </output>
               </outputs>
             </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\AlertDescriptions.Paths[Excel Source Output]"
+              endId="Package\AlertDescriptions\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Excel Source Output"
+              startId="Package\AlertDescriptions\Excel AlertDescriptions.Outputs[Excel Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Alerts"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{2DB0407B-2497-4BE3-BEAA-1B19D70C93A4}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Alerts"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
             <component
-              refId="Package\Insert XMLs\XML Source (Web API or File)"
+              refId="Package\Alerts\Alert XMLs"
               componentClassID="Microsoft.ManagedComponentHost"
               contactInfo="XML Source (Web API or File); ZappySys LLC (c) All Rights Reserved; SSIS PowerPack; http://www.zappysys.com/support"
               description="The XML source is used to read data from XML files, XML REST/SOAP Web service or direct XML String."
-              name="XML Source (Web API or File)"
+              name="Alert XMLs"
               usesDispositions="true"
               version="6">
               <properties>
@@ -765,209 +921,414 @@
               </properties>
               <outputs>
                 <output
-                  refId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput]"
+                  refId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput]"
                   errorOrTruncationOperation="Error"
                   errorRowDisposition="IgnoreFailure"
                   name="XmlSourceOutput"
                   truncationRowDisposition="IgnoreFailure">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].Columns[AGVAlert.AGV]"
+                      refId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].Columns[AGVAlert.AGV]"
                       dataType="i8"
-                      externalMetadataColumnId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].ExternalColumns[AGVAlert.AGV]"
-                      lineageId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].Columns[AGVAlert.AGV]"
+                      externalMetadataColumnId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].ExternalColumns[AGVAlert.AGV]"
+                      lineageId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].Columns[AGVAlert.AGV]"
                       name="AGVAlert.AGV" />
                     <outputColumn
-                      refId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].Columns[AGVAlert.AlertType]"
-                      codePage="1252"
-                      dataType="str"
-                      externalMetadataColumnId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].ExternalColumns[AGVAlert.AlertType]"
+                      refId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].Columns[AGVAlert.AlertType]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].ExternalColumns[AGVAlert.AlertType]"
                       length="108"
-                      lineageId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].Columns[AGVAlert.AlertType]"
+                      lineageId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].Columns[AGVAlert.AlertType]"
                       name="AGVAlert.AlertType" />
                     <outputColumn
-                      refId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].Columns[AGVAlert.TimeStamp]"
+                      refId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].Columns[AGVAlert.TimeStamp]"
                       dataType="dbTime2"
-                      externalMetadataColumnId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].ExternalColumns[AGVAlert.TimeStamp]"
-                      lineageId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].Columns[AGVAlert.TimeStamp]"
+                      externalMetadataColumnId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].ExternalColumns[AGVAlert.TimeStamp]"
+                      lineageId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].Columns[AGVAlert.TimeStamp]"
                       name="AGVAlert.TimeStamp"
                       scale="7" />
                     <outputColumn
-                      refId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].Columns[AGVAlert.Blocked]"
+                      refId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].Columns[AGVAlert.Blocked]"
                       dataType="i1"
-                      externalMetadataColumnId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].ExternalColumns[AGVAlert.Blocked]"
-                      lineageId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].Columns[AGVAlert.Blocked]"
+                      externalMetadataColumnId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].ExternalColumns[AGVAlert.Blocked]"
+                      lineageId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].Columns[AGVAlert.Blocked]"
                       name="AGVAlert.Blocked" />
                     <outputColumn
-                      refId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].Columns[AGVAlert.AGVJobKey]"
+                      refId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].Columns[AGVAlert.AGVJobKey]"
                       dataType="i8"
-                      externalMetadataColumnId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].ExternalColumns[AGVAlert.AGVJobKey]"
-                      lineageId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].Columns[AGVAlert.AGVJobKey]"
+                      externalMetadataColumnId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].ExternalColumns[AGVAlert.AGVJobKey]"
+                      lineageId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].Columns[AGVAlert.AGVJobKey]"
                       name="AGVAlert.AGVJobKey" />
                     <outputColumn
-                      refId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].Columns[AGVAlert.XLocation]"
+                      refId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].Columns[AGVAlert.XLocation]"
                       dataType="i8"
-                      externalMetadataColumnId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].ExternalColumns[AGVAlert.XLocation]"
-                      lineageId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].Columns[AGVAlert.XLocation]"
+                      externalMetadataColumnId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].ExternalColumns[AGVAlert.XLocation]"
+                      lineageId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].Columns[AGVAlert.XLocation]"
                       name="AGVAlert.XLocation" />
                     <outputColumn
-                      refId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].Columns[AGVAlert.YLocation]"
+                      refId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].Columns[AGVAlert.YLocation]"
                       dataType="i8"
-                      externalMetadataColumnId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].ExternalColumns[AGVAlert.YLocation]"
-                      lineageId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].Columns[AGVAlert.YLocation]"
+                      externalMetadataColumnId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].ExternalColumns[AGVAlert.YLocation]"
+                      lineageId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].Columns[AGVAlert.YLocation]"
                       name="AGVAlert.YLocation" />
                     <outputColumn
-                      refId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].Columns[AGVAlert.Direction]"
+                      refId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].Columns[AGVAlert.Direction]"
                       dataType="i8"
-                      externalMetadataColumnId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].ExternalColumns[AGVAlert.Direction]"
-                      lineageId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].Columns[AGVAlert.Direction]"
+                      externalMetadataColumnId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].ExternalColumns[AGVAlert.Direction]"
+                      lineageId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].Columns[AGVAlert.Direction]"
                       name="AGVAlert.Direction" />
                     <outputColumn
-                      refId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].Columns[AGVAlert.Speed]"
+                      refId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].Columns[AGVAlert.Speed]"
                       dataType="i8"
-                      externalMetadataColumnId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].ExternalColumns[AGVAlert.Speed]"
-                      lineageId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].Columns[AGVAlert.Speed]"
+                      externalMetadataColumnId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].ExternalColumns[AGVAlert.Speed]"
+                      lineageId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].Columns[AGVAlert.Speed]"
                       name="AGVAlert.Speed" />
                     <outputColumn
-                      refId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].Columns[AGVAlert.Loaded]"
+                      refId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].Columns[AGVAlert.Loaded]"
                       dataType="i1"
-                      externalMetadataColumnId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].ExternalColumns[AGVAlert.Loaded]"
-                      lineageId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].Columns[AGVAlert.Loaded]"
+                      externalMetadataColumnId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].ExternalColumns[AGVAlert.Loaded]"
+                      lineageId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].Columns[AGVAlert.Loaded]"
                       name="AGVAlert.Loaded" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].ExternalColumns[AGVAlert.AGV]"
+                      refId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].ExternalColumns[AGVAlert.AGV]"
                       dataType="i8"
                       name="AGVAlert.AGV" />
                     <externalMetadataColumn
-                      refId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].ExternalColumns[AGVAlert.AlertType]"
+                      refId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].ExternalColumns[AGVAlert.AlertType]"
                       dataType="wstr"
                       length="108"
                       name="AGVAlert.AlertType" />
                     <externalMetadataColumn
-                      refId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].ExternalColumns[AGVAlert.TimeStamp]"
+                      refId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].ExternalColumns[AGVAlert.TimeStamp]"
                       dataType="dbTimeStamp"
                       name="AGVAlert.TimeStamp" />
                     <externalMetadataColumn
-                      refId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].ExternalColumns[AGVAlert.Blocked]"
+                      refId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].ExternalColumns[AGVAlert.Blocked]"
                       dataType="i8"
                       name="AGVAlert.Blocked" />
                     <externalMetadataColumn
-                      refId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].ExternalColumns[AGVAlert.AGVJobKey]"
+                      refId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].ExternalColumns[AGVAlert.AGVJobKey]"
                       dataType="i8"
                       name="AGVAlert.AGVJobKey" />
                     <externalMetadataColumn
-                      refId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].ExternalColumns[AGVAlert.XLocation]"
+                      refId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].ExternalColumns[AGVAlert.XLocation]"
                       dataType="i8"
                       name="AGVAlert.XLocation" />
                     <externalMetadataColumn
-                      refId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].ExternalColumns[AGVAlert.YLocation]"
+                      refId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].ExternalColumns[AGVAlert.YLocation]"
                       dataType="i8"
                       name="AGVAlert.YLocation" />
                     <externalMetadataColumn
-                      refId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].ExternalColumns[AGVAlert.Direction]"
+                      refId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].ExternalColumns[AGVAlert.Direction]"
                       dataType="i8"
                       name="AGVAlert.Direction" />
                     <externalMetadataColumn
-                      refId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].ExternalColumns[AGVAlert.Speed]"
+                      refId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].ExternalColumns[AGVAlert.Speed]"
                       dataType="i8"
                       name="AGVAlert.Speed" />
                     <externalMetadataColumn
-                      refId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].ExternalColumns[AGVAlert.Loaded]"
+                      refId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].ExternalColumns[AGVAlert.Loaded]"
                       dataType="i8"
                       name="AGVAlert.Loaded" />
                     <externalMetadataColumn
-                      refId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput].ExternalColumns[__FileName]"
+                      refId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].ExternalColumns[__FileName]"
                       dataType="wstr"
                       length="600"
                       name="__FileName" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSource Error Output]"
+                  refId="Package\Alerts\Alert XMLs.Outputs[XmlSource Error Output]"
                   isErrorOut="true"
                   name="XmlSource Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSource Error Output].Columns[AGVAlert.AGV]"
+                      refId="Package\Alerts\Alert XMLs.Outputs[XmlSource Error Output].Columns[AGVAlert.AGV]"
                       dataType="i8"
-                      lineageId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSource Error Output].Columns[AGVAlert.AGV]"
+                      lineageId="Package\Alerts\Alert XMLs.Outputs[XmlSource Error Output].Columns[AGVAlert.AGV]"
                       name="AGVAlert.AGV" />
                     <outputColumn
-                      refId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSource Error Output].Columns[AGVAlert.AlertType]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Alerts\Alert XMLs.Outputs[XmlSource Error Output].Columns[AGVAlert.AlertType]"
+                      dataType="wstr"
                       length="108"
-                      lineageId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSource Error Output].Columns[AGVAlert.AlertType]"
+                      lineageId="Package\Alerts\Alert XMLs.Outputs[XmlSource Error Output].Columns[AGVAlert.AlertType]"
                       name="AGVAlert.AlertType" />
                     <outputColumn
-                      refId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSource Error Output].Columns[AGVAlert.TimeStamp]"
+                      refId="Package\Alerts\Alert XMLs.Outputs[XmlSource Error Output].Columns[AGVAlert.TimeStamp]"
                       dataType="dbTime2"
-                      lineageId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSource Error Output].Columns[AGVAlert.TimeStamp]"
+                      lineageId="Package\Alerts\Alert XMLs.Outputs[XmlSource Error Output].Columns[AGVAlert.TimeStamp]"
                       name="AGVAlert.TimeStamp"
                       scale="7" />
                     <outputColumn
-                      refId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSource Error Output].Columns[AGVAlert.Blocked]"
+                      refId="Package\Alerts\Alert XMLs.Outputs[XmlSource Error Output].Columns[AGVAlert.Blocked]"
                       dataType="i1"
-                      lineageId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSource Error Output].Columns[AGVAlert.Blocked]"
+                      lineageId="Package\Alerts\Alert XMLs.Outputs[XmlSource Error Output].Columns[AGVAlert.Blocked]"
                       name="AGVAlert.Blocked" />
                     <outputColumn
-                      refId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSource Error Output].Columns[AGVAlert.AGVJobKey]"
+                      refId="Package\Alerts\Alert XMLs.Outputs[XmlSource Error Output].Columns[AGVAlert.AGVJobKey]"
                       dataType="i8"
-                      lineageId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSource Error Output].Columns[AGVAlert.AGVJobKey]"
+                      lineageId="Package\Alerts\Alert XMLs.Outputs[XmlSource Error Output].Columns[AGVAlert.AGVJobKey]"
                       name="AGVAlert.AGVJobKey" />
                     <outputColumn
-                      refId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSource Error Output].Columns[AGVAlert.XLocation]"
+                      refId="Package\Alerts\Alert XMLs.Outputs[XmlSource Error Output].Columns[AGVAlert.XLocation]"
                       dataType="i8"
-                      lineageId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSource Error Output].Columns[AGVAlert.XLocation]"
+                      lineageId="Package\Alerts\Alert XMLs.Outputs[XmlSource Error Output].Columns[AGVAlert.XLocation]"
                       name="AGVAlert.XLocation" />
                     <outputColumn
-                      refId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSource Error Output].Columns[AGVAlert.YLocation]"
+                      refId="Package\Alerts\Alert XMLs.Outputs[XmlSource Error Output].Columns[AGVAlert.YLocation]"
                       dataType="i8"
-                      lineageId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSource Error Output].Columns[AGVAlert.YLocation]"
+                      lineageId="Package\Alerts\Alert XMLs.Outputs[XmlSource Error Output].Columns[AGVAlert.YLocation]"
                       name="AGVAlert.YLocation" />
                     <outputColumn
-                      refId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSource Error Output].Columns[AGVAlert.Direction]"
+                      refId="Package\Alerts\Alert XMLs.Outputs[XmlSource Error Output].Columns[AGVAlert.Direction]"
                       dataType="i8"
-                      lineageId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSource Error Output].Columns[AGVAlert.Direction]"
+                      lineageId="Package\Alerts\Alert XMLs.Outputs[XmlSource Error Output].Columns[AGVAlert.Direction]"
                       name="AGVAlert.Direction" />
                     <outputColumn
-                      refId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSource Error Output].Columns[AGVAlert.Speed]"
+                      refId="Package\Alerts\Alert XMLs.Outputs[XmlSource Error Output].Columns[AGVAlert.Speed]"
                       dataType="i8"
-                      lineageId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSource Error Output].Columns[AGVAlert.Speed]"
+                      lineageId="Package\Alerts\Alert XMLs.Outputs[XmlSource Error Output].Columns[AGVAlert.Speed]"
                       name="AGVAlert.Speed" />
                     <outputColumn
-                      refId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSource Error Output].Columns[AGVAlert.Loaded]"
+                      refId="Package\Alerts\Alert XMLs.Outputs[XmlSource Error Output].Columns[AGVAlert.Loaded]"
                       dataType="i1"
-                      lineageId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSource Error Output].Columns[AGVAlert.Loaded]"
+                      lineageId="Package\Alerts\Alert XMLs.Outputs[XmlSource Error Output].Columns[AGVAlert.Loaded]"
                       name="AGVAlert.Loaded" />
                     <outputColumn
-                      refId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSource Error Output].Columns[ErrorCode]"
+                      refId="Package\Alerts\Alert XMLs.Outputs[XmlSource Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSource Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Alerts\Alert XMLs.Outputs[XmlSource Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSource Error Output].Columns[ErrorColumn]"
+                      refId="Package\Alerts\Alert XMLs.Outputs[XmlSource Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSource Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Alerts\Alert XMLs.Outputs[XmlSource Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                     <outputColumn
-                      refId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSource Error Output].Columns[ErrorColumnName]"
+                      refId="Package\Alerts\Alert XMLs.Outputs[XmlSource Error Output].Columns[ErrorColumnName]"
                       codePage="1252"
                       dataType="str"
                       length="128"
-                      lineageId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSource Error Output].Columns[ErrorColumnName]"
+                      lineageId="Package\Alerts\Alert XMLs.Outputs[XmlSource Error Output].Columns[ErrorColumnName]"
                       name="ErrorColumnName" />
                     <outputColumn
-                      refId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSource Error Output].Columns[ErrorMessage]"
+                      refId="Package\Alerts\Alert XMLs.Outputs[XmlSource Error Output].Columns[ErrorMessage]"
                       dataType="wstr"
                       length="1024"
-                      lineageId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSource Error Output].Columns[ErrorMessage]"
+                      lineageId="Package\Alerts\Alert XMLs.Outputs[XmlSource Error Output].Columns[ErrorMessage]"
                       name="ErrorMessage" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Alerts\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Staging_Alert]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">true</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Alerts\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[(local).AGV_StagingArea]"
+                  connectionManagerRefId="Package.ConnectionManagers[(local).AGV_StagingArea]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Alerts\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Alerts\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AGVAlert.AGV]"
+                      cachedDataType="i8"
+                      cachedName="AGVAlert.AGV"
+                      externalMetadataColumnId="Package\Alerts\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AGV]"
+                      lineageId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].Columns[AGVAlert.AGV]" />
+                    <inputColumn
+                      refId="Package\Alerts\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AGVAlert.AlertType]"
+                      cachedDataType="wstr"
+                      cachedLength="108"
+                      cachedName="AGVAlert.AlertType"
+                      externalMetadataColumnId="Package\Alerts\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AlertType]"
+                      lineageId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].Columns[AGVAlert.AlertType]" />
+                    <inputColumn
+                      refId="Package\Alerts\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AGVAlert.TimeStamp]"
+                      cachedDataType="dbTime2"
+                      cachedName="AGVAlert.TimeStamp"
+                      cachedScale="7"
+                      externalMetadataColumnId="Package\Alerts\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TimeStamp]"
+                      lineageId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].Columns[AGVAlert.TimeStamp]" />
+                    <inputColumn
+                      refId="Package\Alerts\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AGVAlert.Blocked]"
+                      cachedDataType="i1"
+                      cachedName="AGVAlert.Blocked"
+                      externalMetadataColumnId="Package\Alerts\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Blocked]"
+                      lineageId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].Columns[AGVAlert.Blocked]" />
+                    <inputColumn
+                      refId="Package\Alerts\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AGVAlert.AGVJobKey]"
+                      cachedDataType="i8"
+                      cachedName="AGVAlert.AGVJobKey"
+                      externalMetadataColumnId="Package\Alerts\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AGVJobKey]"
+                      lineageId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].Columns[AGVAlert.AGVJobKey]" />
+                    <inputColumn
+                      refId="Package\Alerts\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AGVAlert.XLocation]"
+                      cachedDataType="i8"
+                      cachedName="AGVAlert.XLocation"
+                      externalMetadataColumnId="Package\Alerts\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[XLocation]"
+                      lineageId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].Columns[AGVAlert.XLocation]" />
+                    <inputColumn
+                      refId="Package\Alerts\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AGVAlert.YLocation]"
+                      cachedDataType="i8"
+                      cachedName="AGVAlert.YLocation"
+                      externalMetadataColumnId="Package\Alerts\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[YLocation]"
+                      lineageId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].Columns[AGVAlert.YLocation]" />
+                    <inputColumn
+                      refId="Package\Alerts\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AGVAlert.Direction]"
+                      cachedDataType="i8"
+                      cachedName="AGVAlert.Direction"
+                      externalMetadataColumnId="Package\Alerts\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Direction]"
+                      lineageId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].Columns[AGVAlert.Direction]" />
+                    <inputColumn
+                      refId="Package\Alerts\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AGVAlert.Speed]"
+                      cachedDataType="i8"
+                      cachedName="AGVAlert.Speed"
+                      externalMetadataColumnId="Package\Alerts\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Speed]"
+                      lineageId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].Columns[AGVAlert.Speed]" />
+                    <inputColumn
+                      refId="Package\Alerts\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AGVAlert.Loaded]"
+                      cachedDataType="i1"
+                      cachedName="AGVAlert.Loaded"
+                      externalMetadataColumnId="Package\Alerts\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Loaded]"
+                      lineageId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput].Columns[AGVAlert.Loaded]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Alerts\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AGV]"
+                      dataType="i4"
+                      name="AGV" />
+                    <externalMetadataColumn
+                      refId="Package\Alerts\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AlertType]"
+                      dataType="wstr"
+                      length="50"
+                      name="AlertType" />
+                    <externalMetadataColumn
+                      refId="Package\Alerts\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TimeStamp]"
+                      dataType="dbTimeStamp2"
+                      name="TimeStamp"
+                      scale="7" />
+                    <externalMetadataColumn
+                      refId="Package\Alerts\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Blocked]"
+                      dataType="ui1"
+                      name="Blocked" />
+                    <externalMetadataColumn
+                      refId="Package\Alerts\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AGVJobKey]"
+                      dataType="i4"
+                      name="AGVJobKey" />
+                    <externalMetadataColumn
+                      refId="Package\Alerts\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[XLocation]"
+                      dataType="i4"
+                      name="XLocation" />
+                    <externalMetadataColumn
+                      refId="Package\Alerts\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[YLocation]"
+                      dataType="i4"
+                      name="YLocation" />
+                    <externalMetadataColumn
+                      refId="Package\Alerts\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Direction]"
+                      dataType="i4"
+                      name="Direction" />
+                    <externalMetadataColumn
+                      refId="Package\Alerts\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Speed]"
+                      dataType="i4"
+                      name="Speed" />
+                    <externalMetadataColumn
+                      refId="Package\Alerts\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Loaded]"
+                      dataType="ui1"
+                      name="Loaded" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Alerts\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Alerts\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Alerts\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Alerts\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Alerts\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Alerts\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -976,15 +1337,1051 @@
           </components>
           <paths>
             <path
-              refId="Package\Insert XMLs.Paths[XmlSourceOutput]"
-              endId="Package\Insert XMLs\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              refId="Package\Alerts.Paths[XmlSourceOutput]"
+              endId="Package\Alerts\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="XmlSourceOutput"
-              startId="Package\Insert XMLs\XML Source (Web API or File).Outputs[XmlSourceOutput]" />
+              startId="Package\Alerts\Alert XMLs.Outputs[XmlSourceOutput]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\AVGs"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{40D68F2B-78D3-479D-9D9A-51E8A0C97D29}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="AVGs"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\AVGs\Excel AGVs"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Excel AGVs"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">AGV</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\AVGs\Excel AGVs.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\AVGs\Excel AGVs.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\AVGs\Excel AGVs.Outputs[Excel Source Output].Columns[AVGID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\AVGs\Excel AGVs.Outputs[Excel Source Output].ExternalColumns[AVGID]"
+                      length="255"
+                      lineageId="Package\AVGs\Excel AGVs.Outputs[Excel Source Output].Columns[AVGID]"
+                      name="AVGID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\AVGs\Excel AGVs.Outputs[Excel Source Output].Columns[CustKey]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\AVGs\Excel AGVs.Outputs[Excel Source Output].ExternalColumns[CustKey]"
+                      length="255"
+                      lineageId="Package\AVGs\Excel AGVs.Outputs[Excel Source Output].Columns[CustKey]"
+                      name="CustKey"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\AVGs\Excel AGVs.Outputs[Excel Source Output].Columns[Identification]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\AVGs\Excel AGVs.Outputs[Excel Source Output].ExternalColumns[Identification]"
+                      length="255"
+                      lineageId="Package\AVGs\Excel AGVs.Outputs[Excel Source Output].Columns[Identification]"
+                      name="Identification"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\AVGs\Excel AGVs.Outputs[Excel Source Output].Columns[InProductionDate]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\AVGs\Excel AGVs.Outputs[Excel Source Output].ExternalColumns[InProductionDate]"
+                      length="255"
+                      lineageId="Package\AVGs\Excel AGVs.Outputs[Excel Source Output].Columns[InProductionDate]"
+                      name="InProductionDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\AVGs\Excel AGVs.Outputs[Excel Source Output].Columns[OutProductionDate]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\AVGs\Excel AGVs.Outputs[Excel Source Output].ExternalColumns[OutProductionDate]"
+                      length="255"
+                      lineageId="Package\AVGs\Excel AGVs.Outputs[Excel Source Output].Columns[OutProductionDate]"
+                      name="OutProductionDate"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\AVGs\Excel AGVs.Outputs[Excel Source Output].ExternalColumns[AVGID]"
+                      dataType="wstr"
+                      length="255"
+                      name="AVGID" />
+                    <externalMetadataColumn
+                      refId="Package\AVGs\Excel AGVs.Outputs[Excel Source Output].ExternalColumns[CustKey]"
+                      dataType="wstr"
+                      length="255"
+                      name="CustKey" />
+                    <externalMetadataColumn
+                      refId="Package\AVGs\Excel AGVs.Outputs[Excel Source Output].ExternalColumns[Identification]"
+                      dataType="wstr"
+                      length="255"
+                      name="Identification" />
+                    <externalMetadataColumn
+                      refId="Package\AVGs\Excel AGVs.Outputs[Excel Source Output].ExternalColumns[InProductionDate]"
+                      dataType="wstr"
+                      length="255"
+                      name="InProductionDate" />
+                    <externalMetadataColumn
+                      refId="Package\AVGs\Excel AGVs.Outputs[Excel Source Output].ExternalColumns[OutProductionDate]"
+                      dataType="wstr"
+                      length="255"
+                      name="OutProductionDate" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\AVGs\Excel AGVs.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\AVGs\Excel AGVs.Outputs[Excel Source Error Output].Columns[AVGID]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\AVGs\Excel AGVs.Outputs[Excel Source Error Output].Columns[AVGID]"
+                      name="AVGID" />
+                    <outputColumn
+                      refId="Package\AVGs\Excel AGVs.Outputs[Excel Source Error Output].Columns[CustKey]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\AVGs\Excel AGVs.Outputs[Excel Source Error Output].Columns[CustKey]"
+                      name="CustKey" />
+                    <outputColumn
+                      refId="Package\AVGs\Excel AGVs.Outputs[Excel Source Error Output].Columns[Identification]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\AVGs\Excel AGVs.Outputs[Excel Source Error Output].Columns[Identification]"
+                      name="Identification" />
+                    <outputColumn
+                      refId="Package\AVGs\Excel AGVs.Outputs[Excel Source Error Output].Columns[InProductionDate]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\AVGs\Excel AGVs.Outputs[Excel Source Error Output].Columns[InProductionDate]"
+                      name="InProductionDate" />
+                    <outputColumn
+                      refId="Package\AVGs\Excel AGVs.Outputs[Excel Source Error Output].Columns[OutProductionDate]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\AVGs\Excel AGVs.Outputs[Excel Source Error Output].Columns[OutProductionDate]"
+                      name="OutProductionDate" />
+                    <outputColumn
+                      refId="Package\AVGs\Excel AGVs.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\AVGs\Excel AGVs.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\AVGs\Excel AGVs.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\AVGs\Excel AGVs.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\AVGs\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Staging_AGV]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\AVGs\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[(local).AGV_StagingArea]"
+                  connectionManagerRefId="Package.ConnectionManagers[(local).AGV_StagingArea]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\AVGs\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\AVGs\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CustKey]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="CustKey"
+                      externalMetadataColumnId="Package\AVGs\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CustKey]"
+                      lineageId="Package\AVGs\Excel AGVs.Outputs[Excel Source Output].Columns[CustKey]" />
+                    <inputColumn
+                      refId="Package\AVGs\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Identification]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Identification"
+                      externalMetadataColumnId="Package\AVGs\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Identification]"
+                      lineageId="Package\AVGs\Excel AGVs.Outputs[Excel Source Output].Columns[Identification]" />
+                    <inputColumn
+                      refId="Package\AVGs\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[InProductionDate]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="InProductionDate"
+                      externalMetadataColumnId="Package\AVGs\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[InProductionDate]"
+                      lineageId="Package\AVGs\Excel AGVs.Outputs[Excel Source Output].Columns[InProductionDate]" />
+                    <inputColumn
+                      refId="Package\AVGs\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[OutProductionDate]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="OutProductionDate"
+                      externalMetadataColumnId="Package\AVGs\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OutProductionDate]"
+                      lineageId="Package\AVGs\Excel AGVs.Outputs[Excel Source Output].Columns[OutProductionDate]" />
+                    <inputColumn
+                      refId="Package\AVGs\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AVGID]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="AVGID"
+                      externalMetadataColumnId="Package\AVGs\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AGVID]"
+                      lineageId="Package\AVGs\Excel AGVs.Outputs[Excel Source Output].Columns[AVGID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\AVGs\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AGVID]"
+                      dataType="i4"
+                      name="AGVID" />
+                    <externalMetadataColumn
+                      refId="Package\AVGs\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CustKey]"
+                      dataType="i4"
+                      name="CustKey" />
+                    <externalMetadataColumn
+                      refId="Package\AVGs\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Identification]"
+                      dataType="wstr"
+                      length="10"
+                      name="Identification" />
+                    <externalMetadataColumn
+                      refId="Package\AVGs\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[InProductionDate]"
+                      dataType="dbDate"
+                      name="InProductionDate" />
+                    <externalMetadataColumn
+                      refId="Package\AVGs\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OutProductionDate]"
+                      dataType="dbDate"
+                      name="OutProductionDate" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\AVGs\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\AVGs\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\AVGs\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\AVGs\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\AVGs\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\AVGs\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\AVGs.Paths[Excel Source Output]"
+              endId="Package\AVGs\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Excel Source Output"
+              startId="Package\AVGs\Excel AGVs.Outputs[Excel Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Customers"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{45229EE9-A12B-4167-93AB-2F018F981EA7}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Customers"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Customers\Excel Customers"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Excel Customers"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">Customers</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Customers\Excel Customers.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 2]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 2]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Customers\Excel Customers.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Customers\Excel Customers.Outputs[Excel Source Output].Columns[CustID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Customers\Excel Customers.Outputs[Excel Source Output].ExternalColumns[CustID]"
+                      length="255"
+                      lineageId="Package\Customers\Excel Customers.Outputs[Excel Source Output].Columns[CustID]"
+                      name="CustID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Customers\Excel Customers.Outputs[Excel Source Output].Columns[CustomerName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Customers\Excel Customers.Outputs[Excel Source Output].ExternalColumns[CustomerName]"
+                      length="255"
+                      lineageId="Package\Customers\Excel Customers.Outputs[Excel Source Output].Columns[CustomerName]"
+                      name="CustomerName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Customers\Excel Customers.Outputs[Excel Source Output].Columns[CustomerCountry]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Customers\Excel Customers.Outputs[Excel Source Output].ExternalColumns[CustomerCountry]"
+                      length="255"
+                      lineageId="Package\Customers\Excel Customers.Outputs[Excel Source Output].Columns[CustomerCountry]"
+                      name="CustomerCountry"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Customers\Excel Customers.Outputs[Excel Source Output].Columns[CustomerBranch]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Customers\Excel Customers.Outputs[Excel Source Output].ExternalColumns[CustomerBranch]"
+                      length="255"
+                      lineageId="Package\Customers\Excel Customers.Outputs[Excel Source Output].Columns[CustomerBranch]"
+                      name="CustomerBranch"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Customers\Excel Customers.Outputs[Excel Source Output].Columns[F5]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Customers\Excel Customers.Outputs[Excel Source Output].ExternalColumns[F5]"
+                      length="255"
+                      lineageId="Package\Customers\Excel Customers.Outputs[Excel Source Output].Columns[F5]"
+                      name="F5"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Customers\Excel Customers.Outputs[Excel Source Output].ExternalColumns[CustID]"
+                      dataType="wstr"
+                      length="255"
+                      name="CustID" />
+                    <externalMetadataColumn
+                      refId="Package\Customers\Excel Customers.Outputs[Excel Source Output].ExternalColumns[CustomerName]"
+                      dataType="wstr"
+                      length="255"
+                      name="CustomerName" />
+                    <externalMetadataColumn
+                      refId="Package\Customers\Excel Customers.Outputs[Excel Source Output].ExternalColumns[CustomerCountry]"
+                      dataType="wstr"
+                      length="255"
+                      name="CustomerCountry" />
+                    <externalMetadataColumn
+                      refId="Package\Customers\Excel Customers.Outputs[Excel Source Output].ExternalColumns[CustomerBranch]"
+                      dataType="wstr"
+                      length="255"
+                      name="CustomerBranch" />
+                    <externalMetadataColumn
+                      refId="Package\Customers\Excel Customers.Outputs[Excel Source Output].ExternalColumns[F5]"
+                      dataType="wstr"
+                      length="255"
+                      name="F5" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Customers\Excel Customers.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Customers\Excel Customers.Outputs[Excel Source Error Output].Columns[CustID]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Customers\Excel Customers.Outputs[Excel Source Error Output].Columns[CustID]"
+                      name="CustID" />
+                    <outputColumn
+                      refId="Package\Customers\Excel Customers.Outputs[Excel Source Error Output].Columns[CustomerName]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Customers\Excel Customers.Outputs[Excel Source Error Output].Columns[CustomerName]"
+                      name="CustomerName" />
+                    <outputColumn
+                      refId="Package\Customers\Excel Customers.Outputs[Excel Source Error Output].Columns[CustomerCountry]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Customers\Excel Customers.Outputs[Excel Source Error Output].Columns[CustomerCountry]"
+                      name="CustomerCountry" />
+                    <outputColumn
+                      refId="Package\Customers\Excel Customers.Outputs[Excel Source Error Output].Columns[CustomerBranch]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Customers\Excel Customers.Outputs[Excel Source Error Output].Columns[CustomerBranch]"
+                      name="CustomerBranch" />
+                    <outputColumn
+                      refId="Package\Customers\Excel Customers.Outputs[Excel Source Error Output].Columns[F5]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Customers\Excel Customers.Outputs[Excel Source Error Output].Columns[F5]"
+                      name="F5" />
+                    <outputColumn
+                      refId="Package\Customers\Excel Customers.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Customers\Excel Customers.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Customers\Excel Customers.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Customers\Excel Customers.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Customers\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Staging_Customer]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">true</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Customers\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[(local).AGV_StagingArea]"
+                  connectionManagerRefId="Package.ConnectionManagers[(local).AGV_StagingArea]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Customers\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Customers\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CustID]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="CustID"
+                      externalMetadataColumnId="Package\Customers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CustID]"
+                      lineageId="Package\Customers\Excel Customers.Outputs[Excel Source Output].Columns[CustID]" />
+                    <inputColumn
+                      refId="Package\Customers\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CustomerName]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="CustomerName"
+                      externalMetadataColumnId="Package\Customers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CustomerName]"
+                      lineageId="Package\Customers\Excel Customers.Outputs[Excel Source Output].Columns[CustomerName]" />
+                    <inputColumn
+                      refId="Package\Customers\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CustomerCountry]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="CustomerCountry"
+                      externalMetadataColumnId="Package\Customers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CustomerCountry]"
+                      lineageId="Package\Customers\Excel Customers.Outputs[Excel Source Output].Columns[CustomerCountry]" />
+                    <inputColumn
+                      refId="Package\Customers\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CustomerBranch]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="CustomerBranch"
+                      externalMetadataColumnId="Package\Customers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CustomerBranch]"
+                      lineageId="Package\Customers\Excel Customers.Outputs[Excel Source Output].Columns[CustomerBranch]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Customers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CustID]"
+                      dataType="i4"
+                      name="CustID" />
+                    <externalMetadataColumn
+                      refId="Package\Customers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CustomerName]"
+                      dataType="wstr"
+                      length="50"
+                      name="CustomerName" />
+                    <externalMetadataColumn
+                      refId="Package\Customers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CustomerCountry]"
+                      dataType="wstr"
+                      length="50"
+                      name="CustomerCountry" />
+                    <externalMetadataColumn
+                      refId="Package\Customers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CustomerBranch]"
+                      dataType="wstr"
+                      length="50"
+                      name="CustomerBranch" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Customers\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Customers\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Customers\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Customers\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Customers\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Customers\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Customers.Paths[Excel Source Output]"
+              endId="Package\Customers\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Excel Source Output"
+              startId="Package\Customers\Excel Customers.Outputs[Excel Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SpeedCategories"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{0B0BA4FE-4DF6-430B-A71E-25ECDFBEEA82}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SpeedCategories"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\SpeedCategories\Excel SpeedCategories"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Excel SpeedCategories"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">Sheet1$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\SpeedCategories\Excel SpeedCategories.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 3]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 3]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\SpeedCategories\Excel SpeedCategories.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SpeedCategories\Excel SpeedCategories.Outputs[Excel Source Output].Columns[SpeedCategory]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SpeedCategories\Excel SpeedCategories.Outputs[Excel Source Output].ExternalColumns[SpeedCategory]"
+                      length="255"
+                      lineageId="Package\SpeedCategories\Excel SpeedCategories.Outputs[Excel Source Output].Columns[SpeedCategory]"
+                      name="SpeedCategory"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SpeedCategories\Excel SpeedCategories.Outputs[Excel Source Output].Columns[Speed]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SpeedCategories\Excel SpeedCategories.Outputs[Excel Source Output].ExternalColumns[Speed]"
+                      lineageId="Package\SpeedCategories\Excel SpeedCategories.Outputs[Excel Source Output].Columns[Speed]"
+                      name="Speed"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SpeedCategories\Excel SpeedCategories.Outputs[Excel Source Output].Columns[Id]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SpeedCategories\Excel SpeedCategories.Outputs[Excel Source Output].ExternalColumns[Id]"
+                      lineageId="Package\SpeedCategories\Excel SpeedCategories.Outputs[Excel Source Output].Columns[Id]"
+                      name="Id"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\SpeedCategories\Excel SpeedCategories.Outputs[Excel Source Output].ExternalColumns[SpeedCategory]"
+                      dataType="wstr"
+                      length="255"
+                      name="SpeedCategory" />
+                    <externalMetadataColumn
+                      refId="Package\SpeedCategories\Excel SpeedCategories.Outputs[Excel Source Output].ExternalColumns[Speed]"
+                      dataType="r8"
+                      name="Speed" />
+                    <externalMetadataColumn
+                      refId="Package\SpeedCategories\Excel SpeedCategories.Outputs[Excel Source Output].ExternalColumns[Id]"
+                      dataType="r8"
+                      name="Id" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\SpeedCategories\Excel SpeedCategories.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SpeedCategories\Excel SpeedCategories.Outputs[Excel Source Error Output].Columns[Id]"
+                      dataType="r8"
+                      lineageId="Package\SpeedCategories\Excel SpeedCategories.Outputs[Excel Source Error Output].Columns[Id]"
+                      name="Id" />
+                    <outputColumn
+                      refId="Package\SpeedCategories\Excel SpeedCategories.Outputs[Excel Source Error Output].Columns[SpeedCategory]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\SpeedCategories\Excel SpeedCategories.Outputs[Excel Source Error Output].Columns[SpeedCategory]"
+                      name="SpeedCategory" />
+                    <outputColumn
+                      refId="Package\SpeedCategories\Excel SpeedCategories.Outputs[Excel Source Error Output].Columns[Speed]"
+                      dataType="r8"
+                      lineageId="Package\SpeedCategories\Excel SpeedCategories.Outputs[Excel Source Error Output].Columns[Speed]"
+                      name="Speed" />
+                    <outputColumn
+                      refId="Package\SpeedCategories\Excel SpeedCategories.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\SpeedCategories\Excel SpeedCategories.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\SpeedCategories\Excel SpeedCategories.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\SpeedCategories\Excel SpeedCategories.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\SpeedCategories\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Staging_SpeedCategory]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\SpeedCategories\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[(local).AGV_StagingArea]"
+                  connectionManagerRefId="Package.ConnectionManagers[(local).AGV_StagingArea]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\SpeedCategories\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\SpeedCategories\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SpeedCategory]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="SpeedCategory"
+                      externalMetadataColumnId="Package\SpeedCategories\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SpeedCategory]"
+                      lineageId="Package\SpeedCategories\Excel SpeedCategories.Outputs[Excel Source Output].Columns[SpeedCategory]" />
+                    <inputColumn
+                      refId="Package\SpeedCategories\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Speed]"
+                      cachedDataType="r8"
+                      cachedName="Speed"
+                      externalMetadataColumnId="Package\SpeedCategories\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Speed]"
+                      lineageId="Package\SpeedCategories\Excel SpeedCategories.Outputs[Excel Source Output].Columns[Speed]" />
+                    <inputColumn
+                      refId="Package\SpeedCategories\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Id]"
+                      cachedDataType="r8"
+                      cachedName="Id"
+                      externalMetadataColumnId="Package\SpeedCategories\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Id]"
+                      lineageId="Package\SpeedCategories\Excel SpeedCategories.Outputs[Excel Source Output].Columns[Id]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\SpeedCategories\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Id]"
+                      dataType="i4"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\SpeedCategories\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SpeedCategory]"
+                      dataType="wstr"
+                      length="50"
+                      name="SpeedCategory" />
+                    <externalMetadataColumn
+                      refId="Package\SpeedCategories\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Speed]"
+                      dataType="i4"
+                      name="Speed" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\SpeedCategories\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\SpeedCategories\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SpeedCategories\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\SpeedCategories\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\SpeedCategories\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\SpeedCategories\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\SpeedCategories.Paths[Excel Source Output]"
+              endId="Package\SpeedCategories\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Excel Source Output"
+              startId="Package\SpeedCategories\Excel SpeedCategories.Outputs[Excel Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{CC5B4127-3DAD-4EFB-BAE0-ADC7555F7F59}"
+      DTS:From="Package\Customers"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\AVGs" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -996,53 +2393,387 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="138,42"
-          Id="Package\Insert XMLs"
-          TopLeft="232,86" />
-      </GraphLayout>
-    </LayoutInfo>
-  </Package>
-  <TaskHost
-    design-time-name="Package\Insert XMLs">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+          Size="162,42"
+          Id="Package\AlertDescriptions"
+          TopLeft="433,55" />
         <NodeLayout
-          Size="226,42"
-          Id="Package\Insert XMLs\XML Source (Web API or File)"
-          TopLeft="5.5,5.5" />
+          Size="108,42"
+          Id="Package\AVGs"
+          TopLeft="752,164" />
         <NodeLayout
-          Size="177,42"
-          Id="Package\Insert XMLs\OLE DB Destination"
-          TopLeft="189,127" />
+          Size="132,42"
+          Id="Package\Customers"
+          TopLeft="728,78" />
+        <NodeLayout
+          Size="107,42"
+          Id="Package\Alerts"
+          TopLeft="74,59" />
+        <NodeLayout
+          Size="164,42"
+          Id="Package\SpeedCategories"
+          TopLeft="324,191" />
         <EdgeLayout
-          Id="Package\Insert XMLs.Paths[XmlSourceOutput]"
-          TopLeft="118.5,47.5">
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="794,120">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="159,79.5"
+              EndConnector="12,44"
               Start="0,0"
-              End="159,72">
+              End="12,36.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,35.75" />
+                    End="0,18" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,35.75"
-                    Point2="0,39.75"
-                    Point3="4,39.75" />
+                    Point1="0,18"
+                    Point2="0,22"
+                    Point3="4,22" />
                   <mssgle:LineSegment
-                    End="155,39.75" />
+                    End="8,22" />
                   <mssgle:CubicBezierSegment
-                    Point1="155,39.75"
-                    Point2="159,39.75"
-                    Point3="159,43.75" />
+                    Point1="8,22"
+                    Point2="12,22"
+                    Point3="12,26" />
                   <mssgle:LineSegment
-                    End="159,72" />
+                    End="12,36.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\AlertDescriptions">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="177,42"
+          Id="Package\AlertDescriptions\OLE DB Destination"
+          TopLeft="382,176" />
+        <NodeLayout
+          Size="192,42"
+          Id="Package\AlertDescriptions\Excel AlertDescriptions"
+          TopLeft="325,62" />
+        <EdgeLayout
+          Id="Package\AlertDescriptions.Paths[Excel Source Output]"
+          TopLeft="421,104">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="49.5,72"
+              Start="0,0"
+              End="49.5,64.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,32"
+                    Point2="0,36"
+                    Point3="4,36" />
+                  <mssgle:LineSegment
+                    End="45.5,36" />
+                  <mssgle:CubicBezierSegment
+                    Point1="45.5,36"
+                    Point2="49.5,36"
+                    Point3="49.5,40" />
+                  <mssgle:LineSegment
+                    End="49.5,64.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\AlertDescriptions\Excel AlertDescriptions">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\AlertDescriptions\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\AVGs">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="177,42"
+          Id="Package\AVGs\OLE DB Destination"
+          TopLeft="245,170" />
+        <NodeLayout
+          Size="138,42"
+          Id="Package\AVGs\Excel AGVs"
+          TopLeft="24,39" />
+        <EdgeLayout
+          Id="Package\AVGs.Paths[Excel Source Output]"
+          TopLeft="93,81">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="240.5,89"
+              Start="0,0"
+              End="240.5,81.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,40.5"
+                    Point2="0,44.5"
+                    Point3="4,44.5" />
+                  <mssgle:LineSegment
+                    End="236.5,44.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="236.5,44.5"
+                    Point2="240.5,44.5"
+                    Point3="240.5,48.5" />
+                  <mssgle:LineSegment
+                    End="240.5,81.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\AVGs\Excel AGVs">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\AVGs\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Customers">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="177,42"
+          Id="Package\Customers\OLE DB Destination"
+          TopLeft="411,187" />
+        <NodeLayout
+          Size="162,42"
+          Id="Package\Customers\Excel Customers"
+          TopLeft="339,74" />
+        <EdgeLayout
+          Id="Package\Customers.Paths[Excel Source Output]"
+          TopLeft="420,116">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="79.5,71"
+              Start="0,0"
+              End="79.5,63.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.5"
+                    Point2="0,35.5"
+                    Point3="4,35.5" />
+                  <mssgle:LineSegment
+                    End="75.5,35.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="75.5,35.5"
+                    Point2="79.5,35.5"
+                    Point3="79.5,39.5" />
+                  <mssgle:LineSegment
+                    End="79.5,63.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Customers\Excel Customers">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Customers\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Alerts">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="133,42"
+          Id="Package\Alerts\Alert XMLs"
+          TopLeft="5.5,5.5" />
+        <NodeLayout
+          Size="177,42"
+          Id="Package\Alerts\OLE DB Destination"
+          TopLeft="211,163" />
+        <EdgeLayout
+          Id="Package\Alerts.Paths[XmlSourceOutput]"
+          TopLeft="72,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="227.5,115.5"
+              Start="0,0"
+              End="227.5,108">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,53.75"
+                    Point2="0,57.75"
+                    Point3="4,57.75" />
+                  <mssgle:LineSegment
+                    End="223.5,57.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="223.5,57.75"
+                    Point2="227.5,57.75"
+                    Point3="227.5,61.75" />
+                  <mssgle:LineSegment
+                    End="227.5,108" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\SpeedCategories">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="177,42"
+          Id="Package\SpeedCategories\OLE DB Destination"
+          TopLeft="409,162" />
+        <NodeLayout
+          Size="194,42"
+          Id="Package\SpeedCategories\Excel SpeedCategories"
+          TopLeft="322,33" />
+        <EdgeLayout
+          Id="Package\SpeedCategories.Paths[Excel Source Output]"
+          TopLeft="419,75">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="78.5,87"
+              Start="0,0"
+              End="78.5,79.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,39.5"
+                    Point2="0,43.5"
+                    Point3="4,43.5" />
+                  <mssgle:LineSegment
+                    End="74.5,43.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="74.5,43.5"
+                    Point2="78.5,43.5"
+                    Point3="78.5,47.5" />
+                  <mssgle:LineSegment
+                    End="78.5,79.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1055,7 +2786,33 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Insert XMLs\OLE DB Destination">
+    design-time-name="Package\SpeedCategories\Excel SpeedCategories">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\SpeedCategories\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Alerts\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
