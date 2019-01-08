@@ -5,21 +5,21 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="LAPTOP-9OVFP3DM"
   DTS:CreatorName="LAPTOP-9OVFP3DM\ecore"
-  DTS:DTSID="{D542C6D3-D300-48AD-9921-F5D10218ABE7}"
+  DTS:DTSID="{BC8181DA-4586-4C63-B66F-721D7F18D7E8}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="14.0.0800.90"
   DTS:LocaleID="2057"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
   DTS:VersionBuild="5"
-  DTS:VersionGUID="{5473B744-A826-49E4-A755-7925FF8A222F}">
+  DTS:VersionGUID="{C9EC029F-0F6F-4EE2-BF80-D27B85189696}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[(local).AGV_DataWarehouse]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{BFB2ED29-E702-4B6F-A322-7D0E282DB191}"
+      DTS:DTSID="{B3A7E444-2DBB-4C4B-A960-FA71C2660DDC}"
       DTS:ObjectName="(local).AGV_DataWarehouse">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -29,7 +29,7 @@
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[(local).AGV_StagingArea]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{26C88CD2-E1BC-4FEB-884C-CFC43B78A373}"
+      DTS:DTSID="{61398EB8-829E-4D70-B7AC-EEBF364D17EB}"
       DTS:ObjectName="(local).AGV_StagingArea">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -43,7 +43,7 @@
       DTS:refId="Package\Insert XMLs"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{FF090D74-181E-4ED6-BD9B-198012215132}"
+      DTS:DTSID="{2DB0407B-2497-4BE3-BEAA-1B19D70C93A4}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Insert XMLs"
