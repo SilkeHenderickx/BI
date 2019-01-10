@@ -11,8 +11,8 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="34"
-  DTS:VersionGUID="{AF164271-AB2E-42B0-8E2E-6FA81D03F3DB}">
+  DTS:VersionBuild="36"
+  DTS:VersionGUID="{A13A7546-350F-46F5-8C45-11DEB1E70D06}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -148,6 +148,123 @@
               DTS:TextQualified="True"
               DTS:ObjectName="ErrorColumn"
               DTS:DTSID="{4E264D5A-15DB-41DF-B0E3-79CE4422C2B0}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{AC2AABCA-3CD9-4A07-B792-886491470F9D}"
+      DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2057"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\Workspace\VisualStudio\BI\ErrorLogs\LookupAlertTypeId_ErrorFlow.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AGV"
+              DTS:DTSID="{7B5F2716-C34D-4317-A142-35359ABAEC17}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AlertType"
+              DTS:DTSID="{91738634-BF2E-4AD4-960C-23A953AB5401}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="304"
+              DTS:DataScale="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TimeStamp"
+              DTS:DTSID="{B9215548-CD02-43B6-860B-B5AAA6603938}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Blocked"
+              DTS:DTSID="{65222BAE-FCE7-4011-9550-5A51F6203548}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AGVJobKey"
+              DTS:DTSID="{CBA77BE2-D2C9-4AB6-B6D8-39B5A1E401E3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="XLocation"
+              DTS:DTSID="{59712C19-1384-44AE-AD67-CE4FD657EF97}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YLocation"
+              DTS:DTSID="{B7D59CF8-C7EB-4AE2-B60F-AB3EBDB43114}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Direction"
+              DTS:DTSID="{0EA334B1-77CE-48E3-A0B7-2C023EF7FC53}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Speed"
+              DTS:DTSID="{1CCBDBD1-7113-4260-BE20-F98122265BD4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Loaded"
+              DTS:DTSID="{58ECD2D8-D2D3-4A6A-BAA2-14114C77A596}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorCode"
+              DTS:DTSID="{891C07CC-B515-44F0-8842-E41541C93ACE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorColumn"
+              DTS:DTSID="{4AEFCEFC-481F-4D42-87C7-C3412BD9209E}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -907,6 +1024,173 @@
               </inputs>
             </component>
             <component
+              refId="Package\DF_Alert\Flat File Destination 1"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="2057"
+              name="Flat File Destination 1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DF_Alert\Flat File Destination 1.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[AGV]"
+                      cachedDataType="i4"
+                      cachedName="AGV"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[AGV]"
+                      lineageId="Package\DF_Alert\SortByAVG.Outputs[Sort Output].Columns[AGV]" />
+                    <inputColumn
+                      refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[AlertType]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="AlertType"
+                      externalMetadataColumnId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[AlertType]"
+                      lineageId="Package\DF_Alert\SortByAVG.Outputs[Sort Output].Columns[AlertType]" />
+                    <inputColumn
+                      refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[TimeStamp]"
+                      cachedDataType="dbTimeStamp2"
+                      cachedName="TimeStamp"
+                      cachedScale="7"
+                      externalMetadataColumnId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[TimeStamp]"
+                      lineageId="Package\DF_Alert\SortByAVG.Outputs[Sort Output].Columns[TimeStamp]" />
+                    <inputColumn
+                      refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[Blocked]"
+                      cachedDataType="ui1"
+                      cachedName="Blocked"
+                      externalMetadataColumnId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[Blocked]"
+                      lineageId="Package\DF_Alert\SortByAVG.Outputs[Sort Output].Columns[Blocked]" />
+                    <inputColumn
+                      refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[AGVJobKey]"
+                      cachedDataType="i4"
+                      cachedName="AGVJobKey"
+                      externalMetadataColumnId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[AGVJobKey]"
+                      lineageId="Package\DF_Alert\SortByAVG.Outputs[Sort Output].Columns[AGVJobKey]" />
+                    <inputColumn
+                      refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[XLocation]"
+                      cachedDataType="i4"
+                      cachedName="XLocation"
+                      externalMetadataColumnId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[XLocation]"
+                      lineageId="Package\DF_Alert\SortByAVG.Outputs[Sort Output].Columns[XLocation]" />
+                    <inputColumn
+                      refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[YLocation]"
+                      cachedDataType="i4"
+                      cachedName="YLocation"
+                      externalMetadataColumnId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[YLocation]"
+                      lineageId="Package\DF_Alert\SortByAVG.Outputs[Sort Output].Columns[YLocation]" />
+                    <inputColumn
+                      refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[Direction]"
+                      cachedDataType="i4"
+                      cachedName="Direction"
+                      externalMetadataColumnId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[Direction]"
+                      lineageId="Package\DF_Alert\SortByAVG.Outputs[Sort Output].Columns[Direction]" />
+                    <inputColumn
+                      refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[Speed]"
+                      cachedDataType="i4"
+                      cachedName="Speed"
+                      externalMetadataColumnId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[Speed]"
+                      lineageId="Package\DF_Alert\SortByAVG.Outputs[Sort Output].Columns[Speed]" />
+                    <inputColumn
+                      refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[Loaded]"
+                      cachedDataType="ui1"
+                      cachedName="Loaded"
+                      externalMetadataColumnId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[Loaded]"
+                      lineageId="Package\DF_Alert\SortByAVG.Outputs[Sort Output].Columns[Loaded]" />
+                    <inputColumn
+                      refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[ErrorCode]"
+                      cachedDataType="i4"
+                      cachedName="ErrorCode"
+                      externalMetadataColumnId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                      lineageId="Package\DF_Alert\LookupAlertTypeId.Outputs[Lookup Error Output].Columns[ErrorCode]" />
+                    <inputColumn
+                      refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[ErrorColumn]"
+                      cachedDataType="i4"
+                      cachedName="ErrorColumn"
+                      externalMetadataColumnId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                      lineageId="Package\DF_Alert\LookupAlertTypeId.Outputs[Lookup Error Output].Columns[ErrorColumn]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[AGV]"
+                      dataType="i4"
+                      name="AGV" />
+                    <externalMetadataColumn
+                      refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[AlertType]"
+                      dataType="wstr"
+                      length="50"
+                      name="AlertType" />
+                    <externalMetadataColumn
+                      refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[TimeStamp]"
+                      dataType="dbTimeStamp2"
+                      name="TimeStamp"
+                      scale="7" />
+                    <externalMetadataColumn
+                      refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[Blocked]"
+                      dataType="ui1"
+                      name="Blocked" />
+                    <externalMetadataColumn
+                      refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[AGVJobKey]"
+                      dataType="i4"
+                      name="AGVJobKey" />
+                    <externalMetadataColumn
+                      refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[XLocation]"
+                      dataType="i4"
+                      name="XLocation" />
+                    <externalMetadataColumn
+                      refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[YLocation]"
+                      dataType="i4"
+                      name="YLocation" />
+                    <externalMetadataColumn
+                      refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[Direction]"
+                      dataType="i4"
+                      name="Direction" />
+                    <externalMetadataColumn
+                      refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[Speed]"
+                      dataType="i4"
+                      name="Speed" />
+                    <externalMetadataColumn
+                      refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[Loaded]"
+                      dataType="ui1"
+                      name="Loaded" />
+                    <externalMetadataColumn
+                      refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                      dataType="i4"
+                      name="ErrorCode" />
+                    <externalMetadataColumn
+                      refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                      dataType="i4"
+                      name="ErrorColumn" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
               refId="Package\DF_Alert\LookupAlertTypeId"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
@@ -1011,7 +1295,7 @@ where [refTable].[Description] = ?</property>
                 <output
                   refId="Package\DF_Alert\LookupAlertTypeId.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="FailComponent"
+                  errorRowDisposition="RedirectRow"
                   exclusionGroup="1"
                   name="Lookup Match Output"
                   synchronousInputId="Package\DF_Alert\LookupAlertTypeId.Inputs[Lookup Input]">
@@ -1022,7 +1306,7 @@ where [refTable].[Description] = ?</property>
                       errorOrTruncationOperation="Copy Column"
                       lineageId="Package\DF_Alert\LookupAlertTypeId.Outputs[Lookup Match Output].Columns[AlertTypeId]"
                       name="AlertTypeId"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           dataType="System.String"
@@ -2447,6 +2731,11 @@ where [refTable].[Speed] = ?</property>
             </component>
           </components>
           <paths>
+            <path
+              refId="Package\DF_Alert.Paths[Lookup Error Output]"
+              endId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input]"
+              name="Lookup Error Output"
+              startId="Package\DF_Alert\LookupAlertTypeId.Outputs[Lookup Error Output]" />
             <path
               refId="Package\DF_Alert.Paths[Lookup Match Output]"
               endId="Package\DF_Alert\Merge Join.Inputs[Merge Join Left Input]"
@@ -5941,6 +6230,34 @@ where [refTable].[CountryName] = ?</property>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
               BoundingBox="-73.20890625,19.783203125,146.4178125,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="181,42"
+          Id="Package\DF_Alert\Flat File Destination 1"
+          TopLeft="629,345" />
+        <EdgeLayout
+          Id="Package\DF_Alert.Paths[Lookup Error Output]"
+          TopLeft="539,365">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="90,0"
+              Start="0,0"
+              End="82.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="82.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-4.61638671875001,5,91.7327734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
