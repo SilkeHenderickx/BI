@@ -1,0 +1,1 @@
+AGV,TimeStamp,Blocked,AGVJobKey,XLocation,YLocation,Direction,Loaded,SpeedId,AlertTypeId,ErrorCode,ErrorColumn

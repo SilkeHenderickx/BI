@@ -11,8 +11,8 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="36"
-  DTS:VersionGUID="{A13A7546-350F-46F5-8C45-11DEB1E70D06}">
+  DTS:VersionBuild="39"
+  DTS:VersionGUID="{6F7018E4-DBEA-4311-B96A-E7DE0A451C9A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -37,6 +37,240 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Alert_ErrorFlow]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{AC2AABCA-3CD9-4A07-B792-886491470F9D}"
+      DTS:ObjectName="Alert_ErrorFlow">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2057"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\Workspace\VisualStudio\BI\ErrorLogs\DFAlert_ErrorFlow.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 0"
+              DTS:DTSID="{8083980A-6B0D-4B2F-8BDC-336DE000109F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="304"
+              DTS:DataScale="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 1"
+              DTS:DTSID="{2409E624-1A34-455E-87F4-E69208A79C0D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 2"
+              DTS:DTSID="{6C831BB6-7B2B-4ACE-ADFF-943E64D488D2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 3"
+              DTS:DTSID="{F68F7656-8D38-4C9F-B536-BCA7CC57B798}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 4"
+              DTS:DTSID="{06FEFB73-7327-4714-ABC4-D5AF9CE710CA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 5"
+              DTS:DTSID="{E5EE88DF-73B1-4432-A458-1F4B3E21A486}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 6"
+              DTS:DTSID="{201AC9CE-155E-4257-900C-6C4E096CFB29}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 7"
+              DTS:DTSID="{D983BEDB-78B1-4C4C-A776-8451B32EC786}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 8"
+              DTS:DTSID="{3F948E4B-13D3-409F-BB35-3409475D6F64}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 9"
+              DTS:DTSID="{A52F49ED-DEE2-41EB-B65D-4F177C08819F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 10"
+              DTS:DTSID="{C5BE53E0-1186-4FD2-90F3-04DC53ED9EF9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 11"
+              DTS:DTSID="{71DC6DA7-5AB8-4DC6-87E6-B3E663A12DCE}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DF_Alert_Errorflow]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{4F179A20-A418-4615-A2D3-8BBECE988106}"
+      DTS:ObjectName="DF_Alert_Errorflow">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2057"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\Workspace\VisualStudio\BI\ErrorLogs\Alert_ErrorFlow.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AGV"
+              DTS:DTSID="{A6F581CD-DF05-4219-8682-B46B1ACC5AF5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="304"
+              DTS:DataScale="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TimeStamp"
+              DTS:DTSID="{39530AD5-343D-4432-AE70-A8812EDB1093}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Blocked"
+              DTS:DTSID="{5F66407B-5B81-4011-B3F5-F4106EAAAB42}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AGVJobKey"
+              DTS:DTSID="{D786A9E7-0F9A-498B-900A-E348935DE114}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="XLocation"
+              DTS:DTSID="{73DFD384-DD9D-44C1-816B-D3DAE4C568E4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YLocation"
+              DTS:DTSID="{EA6AAF00-EFFF-4700-8C5A-2280D30C3A18}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Direction"
+              DTS:DTSID="{3F485F75-5754-4D2C-8F1D-F22B49BA9D2B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Loaded"
+              DTS:DTSID="{C31C636F-5C42-4C9A-B66E-A8BF0EF817E5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SpeedId"
+              DTS:DTSID="{4C286C87-D9FB-44AF-AC93-43F45FE9C0A5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AlertTypeId"
+              DTS:DTSID="{72874496-FC85-405C-A73B-624077596C15}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorCode"
+              DTS:DTSID="{7C02597E-2860-46C4-8957-E5F6DF774F34}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorColumn"
+              DTS:DTSID="{C92A0C6D-DDBB-4A06-93FA-5697DD0D8B3A}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
       DTS:CreationName="FLATFILE"
       DTS:DTSID="{74A25DF1-7172-4326-A28D-BCF68EC595FE}"
@@ -50,224 +284,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="D:\Workspace\VisualStudio\BI\ErrorLogs\DF_Alert_ErrorFlow.txt">
-          <DTS:FlatFileColumns>
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="3"
-              DTS:TextQualified="True"
-              DTS:ObjectName="AGV"
-              DTS:DTSID="{8A38DA13-D415-45D7-BE07-424D20F5D264}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="304"
-              DTS:DataScale="7"
-              DTS:TextQualified="True"
-              DTS:ObjectName="TimeStamp"
-              DTS:DTSID="{1BEE9794-07EC-4550-9987-A8A3DF6EB024}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="17"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Blocked"
-              DTS:DTSID="{2802F0C8-5CEC-43EE-8B43-5BA8BEDB1419}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="3"
-              DTS:TextQualified="True"
-              DTS:ObjectName="AGVJobKey"
-              DTS:DTSID="{FF3E228C-C017-42AE-AF5A-005487FCBEEE}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="3"
-              DTS:TextQualified="True"
-              DTS:ObjectName="XLocation"
-              DTS:DTSID="{E857FE04-BF7B-48DA-ACB3-0525B8018C8C}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="3"
-              DTS:TextQualified="True"
-              DTS:ObjectName="YLocation"
-              DTS:DTSID="{8F615F03-3189-4954-9D1C-260BC769F50F}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="3"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Direction"
-              DTS:DTSID="{E2F8B7A8-AE40-4EB3-A799-602075DCD9CC}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="17"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Loaded"
-              DTS:DTSID="{710EFE89-815D-4680-B25A-009BE87ADFA8}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="3"
-              DTS:TextQualified="True"
-              DTS:ObjectName="SpeedId"
-              DTS:DTSID="{5C92DC2B-F87D-487A-808E-3683686D612A}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="3"
-              DTS:TextQualified="True"
-              DTS:ObjectName="AlertTypeId"
-              DTS:DTSID="{90001059-51C4-430B-94A7-CF812993E9B4}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="3"
-              DTS:TextQualified="True"
-              DTS:ObjectName="ErrorCode"
-              DTS:DTSID="{B811528D-FF59-404F-A90F-74EF707AD7F6}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:DataType="3"
-              DTS:TextQualified="True"
-              DTS:ObjectName="ErrorColumn"
-              DTS:DTSID="{4E264D5A-15DB-41DF-B0E3-79CE4422C2B0}"
-              DTS:CreationName="" />
-          </DTS:FlatFileColumns>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
-      DTS:CreationName="FLATFILE"
-      DTS:DTSID="{AC2AABCA-3CD9-4A07-B792-886491470F9D}"
-      DTS:ObjectName="Flat File Connection Manager 1">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:Format="Delimited"
-          DTS:LocaleID="2057"
-          DTS:HeaderRowDelimiter="_x000D__x000A_"
-          DTS:RowDelimiter=""
-          DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="1252"
-          DTS:ConnectionString="D:\Workspace\VisualStudio\BI\ErrorLogs\LookupAlertTypeId_ErrorFlow.txt">
-          <DTS:FlatFileColumns>
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="3"
-              DTS:TextQualified="True"
-              DTS:ObjectName="AGV"
-              DTS:DTSID="{7B5F2716-C34D-4317-A142-35359ABAEC17}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="AlertType"
-              DTS:DTSID="{91738634-BF2E-4AD4-960C-23A953AB5401}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="304"
-              DTS:DataScale="7"
-              DTS:TextQualified="True"
-              DTS:ObjectName="TimeStamp"
-              DTS:DTSID="{B9215548-CD02-43B6-860B-B5AAA6603938}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="17"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Blocked"
-              DTS:DTSID="{65222BAE-FCE7-4011-9550-5A51F6203548}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="3"
-              DTS:TextQualified="True"
-              DTS:ObjectName="AGVJobKey"
-              DTS:DTSID="{CBA77BE2-D2C9-4AB6-B6D8-39B5A1E401E3}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="3"
-              DTS:TextQualified="True"
-              DTS:ObjectName="XLocation"
-              DTS:DTSID="{59712C19-1384-44AE-AD67-CE4FD657EF97}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="3"
-              DTS:TextQualified="True"
-              DTS:ObjectName="YLocation"
-              DTS:DTSID="{B7D59CF8-C7EB-4AE2-B60F-AB3EBDB43114}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="3"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Direction"
-              DTS:DTSID="{0EA334B1-77CE-48E3-A0B7-2C023EF7FC53}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="3"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Speed"
-              DTS:DTSID="{1CCBDBD1-7113-4260-BE20-F98122265BD4}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="17"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Loaded"
-              DTS:DTSID="{58ECD2D8-D2D3-4A6A-BAA2-14114C77A596}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="3"
-              DTS:TextQualified="True"
-              DTS:ObjectName="ErrorCode"
-              DTS:DTSID="{891C07CC-B515-44F0-8842-E41541C93ACE}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:DataType="3"
-              DTS:TextQualified="True"
-              DTS:ObjectName="ErrorColumn"
-              DTS:DTSID="{4AEFCEFC-481F-4D42-87C7-C3412BD9209E}"
-              DTS:CreationName="" />
-          </DTS:FlatFileColumns>
-        </DTS:ConnectionManager>
+          DTS:ConnectionString="D:\Workspace\VisualStudio\BI\ErrorLogs\DF_Alert_ErrorFlow.txt" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -690,11 +707,11 @@
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">true</property>
+                  name="FastLoadKeepIdentity">false</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">true</property>
+                  name="FastLoadKeepNulls">false</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
@@ -883,8 +900,8 @@
               <connections>
                 <connection
                   refId="Package\DF_Alert\Flat File Destination.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
-                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerID="Package.ConnectionManagers[DF_Alert_Errorflow]"
+                  connectionManagerRefId="Package.ConnectionManagers[DF_Alert_Errorflow]"
                   name="FlatFileConnection" />
               </connections>
               <inputs>
@@ -1024,173 +1041,6 @@
               </inputs>
             </component>
             <component
-              refId="Package\DF_Alert\Flat File Destination 1"
-              componentClassID="Microsoft.FlatFileDestination"
-              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Flat File Destination"
-              localeId="2057"
-              name="Flat File Destination 1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Specifies whether the data will overwrite or append to the destination file."
-                  name="Overwrite">true</property>
-                <property
-                  dataType="System.Null"
-                  description="Specifies the text to write to the destination file before any data is written."
-                  expressionType="Notify"
-                  name="Header" />
-                <property
-                  dataType="System.Boolean"
-                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
-                  name="EscapeQualifier">false</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\DF_Alert\Flat File Destination 1.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 1]"
-                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 1]"
-                  name="FlatFileConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input]"
-                  hasSideEffects="true"
-                  name="Flat File Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[AGV]"
-                      cachedDataType="i4"
-                      cachedName="AGV"
-                      cachedSortKeyPosition="1"
-                      externalMetadataColumnId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[AGV]"
-                      lineageId="Package\DF_Alert\SortByAVG.Outputs[Sort Output].Columns[AGV]" />
-                    <inputColumn
-                      refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[AlertType]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="AlertType"
-                      externalMetadataColumnId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[AlertType]"
-                      lineageId="Package\DF_Alert\SortByAVG.Outputs[Sort Output].Columns[AlertType]" />
-                    <inputColumn
-                      refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[TimeStamp]"
-                      cachedDataType="dbTimeStamp2"
-                      cachedName="TimeStamp"
-                      cachedScale="7"
-                      externalMetadataColumnId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[TimeStamp]"
-                      lineageId="Package\DF_Alert\SortByAVG.Outputs[Sort Output].Columns[TimeStamp]" />
-                    <inputColumn
-                      refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[Blocked]"
-                      cachedDataType="ui1"
-                      cachedName="Blocked"
-                      externalMetadataColumnId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[Blocked]"
-                      lineageId="Package\DF_Alert\SortByAVG.Outputs[Sort Output].Columns[Blocked]" />
-                    <inputColumn
-                      refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[AGVJobKey]"
-                      cachedDataType="i4"
-                      cachedName="AGVJobKey"
-                      externalMetadataColumnId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[AGVJobKey]"
-                      lineageId="Package\DF_Alert\SortByAVG.Outputs[Sort Output].Columns[AGVJobKey]" />
-                    <inputColumn
-                      refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[XLocation]"
-                      cachedDataType="i4"
-                      cachedName="XLocation"
-                      externalMetadataColumnId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[XLocation]"
-                      lineageId="Package\DF_Alert\SortByAVG.Outputs[Sort Output].Columns[XLocation]" />
-                    <inputColumn
-                      refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[YLocation]"
-                      cachedDataType="i4"
-                      cachedName="YLocation"
-                      externalMetadataColumnId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[YLocation]"
-                      lineageId="Package\DF_Alert\SortByAVG.Outputs[Sort Output].Columns[YLocation]" />
-                    <inputColumn
-                      refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[Direction]"
-                      cachedDataType="i4"
-                      cachedName="Direction"
-                      externalMetadataColumnId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[Direction]"
-                      lineageId="Package\DF_Alert\SortByAVG.Outputs[Sort Output].Columns[Direction]" />
-                    <inputColumn
-                      refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[Speed]"
-                      cachedDataType="i4"
-                      cachedName="Speed"
-                      externalMetadataColumnId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[Speed]"
-                      lineageId="Package\DF_Alert\SortByAVG.Outputs[Sort Output].Columns[Speed]" />
-                    <inputColumn
-                      refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[Loaded]"
-                      cachedDataType="ui1"
-                      cachedName="Loaded"
-                      externalMetadataColumnId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[Loaded]"
-                      lineageId="Package\DF_Alert\SortByAVG.Outputs[Sort Output].Columns[Loaded]" />
-                    <inputColumn
-                      refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[ErrorCode]"
-                      cachedDataType="i4"
-                      cachedName="ErrorCode"
-                      externalMetadataColumnId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
-                      lineageId="Package\DF_Alert\LookupAlertTypeId.Outputs[Lookup Error Output].Columns[ErrorCode]" />
-                    <inputColumn
-                      refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[ErrorColumn]"
-                      cachedDataType="i4"
-                      cachedName="ErrorColumn"
-                      externalMetadataColumnId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
-                      lineageId="Package\DF_Alert\LookupAlertTypeId.Outputs[Lookup Error Output].Columns[ErrorColumn]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[AGV]"
-                      dataType="i4"
-                      name="AGV" />
-                    <externalMetadataColumn
-                      refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[AlertType]"
-                      dataType="wstr"
-                      length="50"
-                      name="AlertType" />
-                    <externalMetadataColumn
-                      refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[TimeStamp]"
-                      dataType="dbTimeStamp2"
-                      name="TimeStamp"
-                      scale="7" />
-                    <externalMetadataColumn
-                      refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[Blocked]"
-                      dataType="ui1"
-                      name="Blocked" />
-                    <externalMetadataColumn
-                      refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[AGVJobKey]"
-                      dataType="i4"
-                      name="AGVJobKey" />
-                    <externalMetadataColumn
-                      refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[XLocation]"
-                      dataType="i4"
-                      name="XLocation" />
-                    <externalMetadataColumn
-                      refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[YLocation]"
-                      dataType="i4"
-                      name="YLocation" />
-                    <externalMetadataColumn
-                      refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[Direction]"
-                      dataType="i4"
-                      name="Direction" />
-                    <externalMetadataColumn
-                      refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[Speed]"
-                      dataType="i4"
-                      name="Speed" />
-                    <externalMetadataColumn
-                      refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[Loaded]"
-                      dataType="ui1"
-                      name="Loaded" />
-                    <externalMetadataColumn
-                      refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
-                      dataType="i4"
-                      name="ErrorCode" />
-                    <externalMetadataColumn
-                      refId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
-                      dataType="i4"
-                      name="ErrorColumn" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-            </component>
-            <component
               refId="Package\DF_Alert\LookupAlertTypeId"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
@@ -1295,7 +1145,7 @@ where [refTable].[Description] = ?</property>
                 <output
                   refId="Package\DF_Alert\LookupAlertTypeId.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="RedirectRow"
+                  errorRowDisposition="FailComponent"
                   exclusionGroup="1"
                   name="Lookup Match Output"
                   synchronousInputId="Package\DF_Alert\LookupAlertTypeId.Inputs[Lookup Input]">
@@ -1306,7 +1156,7 @@ where [refTable].[Description] = ?</property>
                       errorOrTruncationOperation="Copy Column"
                       lineageId="Package\DF_Alert\LookupAlertTypeId.Outputs[Lookup Match Output].Columns[AlertTypeId]"
                       name="AlertTypeId"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           dataType="System.String"
@@ -2731,11 +2581,6 @@ where [refTable].[Speed] = ?</property>
             </component>
           </components>
           <paths>
-            <path
-              refId="Package\DF_Alert.Paths[Lookup Error Output]"
-              endId="Package\DF_Alert\Flat File Destination 1.Inputs[Flat File Destination Input]"
-              name="Lookup Error Output"
-              startId="Package\DF_Alert\LookupAlertTypeId.Outputs[Lookup Error Output]" />
             <path
               refId="Package\DF_Alert.Paths[Lookup Match Output]"
               endId="Package\DF_Alert\Merge Join.Inputs[Merge Join Left Input]"
@@ -6208,56 +6053,28 @@ where [refTable].[CountryName] = ?</property>
         <NodeLayout
           Size="172,42"
           Id="Package\DF_Alert\Flat File Destination"
-          TopLeft="229,704" />
+          TopLeft="234,694" />
         <EdgeLayout
           Id="Package\DF_Alert.Paths[OLE DB Destination Error Output]"
-          TopLeft="316,645.5">
+          TopLeft="318.5,645.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,58.5"
+              EndConnector="0,48.5"
               Start="0,0"
-              End="0,51">
+              End="0,41">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,51" />
+                    End="0,41" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-73.20890625,19.783203125,146.4178125,11.43359375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="181,42"
-          Id="Package\DF_Alert\Flat File Destination 1"
-          TopLeft="629,345" />
-        <EdgeLayout
-          Id="Package\DF_Alert.Paths[Lookup Error Output]"
-          TopLeft="539,365">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="90,0"
-              Start="0,0"
-              End="82.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="82.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-4.61638671875001,5,91.7327734375,11.609375"
+              BoundingBox="-73.20890625,14.783203125,146.4178125,11.43359375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
