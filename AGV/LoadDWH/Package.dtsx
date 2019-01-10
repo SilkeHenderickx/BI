@@ -11,8 +11,8 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="32"
-  DTS:VersionGUID="{8ECE17E2-6AAB-4C27-9282-DC8A5589B4DB}">
+  DTS:VersionBuild="34"
+  DTS:VersionGUID="{AF164271-AB2E-42B0-8E2E-6FA81D03F3DB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -34,6 +34,123 @@
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectionString="Data Source=(local);Initial Catalog=AGV_StagingArea;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{74A25DF1-7172-4326-A28D-BCF68EC595FE}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2057"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\Workspace\VisualStudio\BI\ErrorLogs\DF_Alert_ErrorFlow.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AGV"
+              DTS:DTSID="{8A38DA13-D415-45D7-BE07-424D20F5D264}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="304"
+              DTS:DataScale="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TimeStamp"
+              DTS:DTSID="{1BEE9794-07EC-4550-9987-A8A3DF6EB024}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Blocked"
+              DTS:DTSID="{2802F0C8-5CEC-43EE-8B43-5BA8BEDB1419}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AGVJobKey"
+              DTS:DTSID="{FF3E228C-C017-42AE-AF5A-005487FCBEEE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="XLocation"
+              DTS:DTSID="{E857FE04-BF7B-48DA-ACB3-0525B8018C8C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YLocation"
+              DTS:DTSID="{8F615F03-3189-4954-9D1C-260BC769F50F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Direction"
+              DTS:DTSID="{E2F8B7A8-AE40-4EB3-A799-602075DCD9CC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Loaded"
+              DTS:DTSID="{710EFE89-815D-4680-B25A-009BE87ADFA8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SpeedId"
+              DTS:DTSID="{5C92DC2B-F87D-487A-808E-3683686D612A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AlertTypeId"
+              DTS:DTSID="{90001059-51C4-430B-94A7-CF812993E9B4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorCode"
+              DTS:DTSID="{B811528D-FF59-404F-A90F-74EF707AD7F6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorColumn"
+              DTS:DTSID="{4E264D5A-15DB-41DF-B0E3-79CE4422C2B0}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -623,6 +740,171 @@
                   <externalMetadataColumns />
                 </output>
               </outputs>
+            </component>
+            <component
+              refId="Package\DF_Alert\Flat File Destination"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="2057"
+              name="Flat File Destination">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DF_Alert\Flat File Destination.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].Columns[AGV]"
+                      cachedDataType="i4"
+                      cachedName="AGV"
+                      externalMetadataColumnId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGV]"
+                      lineageId="Package\DF_Alert\SortByTimeStamp.Outputs[Sort Output].Columns[AGV]" />
+                    <inputColumn
+                      refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].Columns[TimeStamp]"
+                      cachedDataType="dbTimeStamp2"
+                      cachedName="TimeStamp"
+                      cachedScale="7"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[TimeStamp]"
+                      lineageId="Package\DF_Alert\SortByTimeStamp.Outputs[Sort Output].Columns[TimeStamp]" />
+                    <inputColumn
+                      refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].Columns[Blocked]"
+                      cachedDataType="ui1"
+                      cachedName="Blocked"
+                      externalMetadataColumnId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Blocked]"
+                      lineageId="Package\DF_Alert\SortByTimeStamp.Outputs[Sort Output].Columns[Blocked]" />
+                    <inputColumn
+                      refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].Columns[AGVJobKey]"
+                      cachedDataType="i4"
+                      cachedName="AGVJobKey"
+                      externalMetadataColumnId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGVJobKey]"
+                      lineageId="Package\DF_Alert\SortByTimeStamp.Outputs[Sort Output].Columns[AGVJobKey]" />
+                    <inputColumn
+                      refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].Columns[XLocation]"
+                      cachedDataType="i4"
+                      cachedName="XLocation"
+                      externalMetadataColumnId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[XLocation]"
+                      lineageId="Package\DF_Alert\SortByTimeStamp.Outputs[Sort Output].Columns[XLocation]" />
+                    <inputColumn
+                      refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].Columns[YLocation]"
+                      cachedDataType="i4"
+                      cachedName="YLocation"
+                      externalMetadataColumnId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[YLocation]"
+                      lineageId="Package\DF_Alert\SortByTimeStamp.Outputs[Sort Output].Columns[YLocation]" />
+                    <inputColumn
+                      refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].Columns[Direction]"
+                      cachedDataType="i4"
+                      cachedName="Direction"
+                      externalMetadataColumnId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Direction]"
+                      lineageId="Package\DF_Alert\SortByTimeStamp.Outputs[Sort Output].Columns[Direction]" />
+                    <inputColumn
+                      refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].Columns[Loaded]"
+                      cachedDataType="ui1"
+                      cachedName="Loaded"
+                      externalMetadataColumnId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Loaded]"
+                      lineageId="Package\DF_Alert\SortByTimeStamp.Outputs[Sort Output].Columns[Loaded]" />
+                    <inputColumn
+                      refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].Columns[SpeedId]"
+                      cachedDataType="i4"
+                      cachedName="SpeedId"
+                      externalMetadataColumnId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[SpeedId]"
+                      lineageId="Package\DF_Alert\SortByTimeStamp.Outputs[Sort Output].Columns[SpeedId]" />
+                    <inputColumn
+                      refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].Columns[AlertTypeId]"
+                      cachedDataType="i4"
+                      cachedName="AlertTypeId"
+                      externalMetadataColumnId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AlertTypeId]"
+                      lineageId="Package\DF_Alert\SortByTimeStamp.Outputs[Sort Output].Columns[AlertTypeId]" />
+                    <inputColumn
+                      refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].Columns[ErrorCode]"
+                      cachedDataType="i4"
+                      cachedName="ErrorCode"
+                      externalMetadataColumnId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                      lineageId="Package\DF_Alert\DWH_Alert.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]" />
+                    <inputColumn
+                      refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].Columns[ErrorColumn]"
+                      cachedDataType="i4"
+                      cachedName="ErrorColumn"
+                      externalMetadataColumnId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                      lineageId="Package\DF_Alert\DWH_Alert.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGV]"
+                      dataType="i4"
+                      name="AGV" />
+                    <externalMetadataColumn
+                      refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[TimeStamp]"
+                      dataType="dbTimeStamp2"
+                      name="TimeStamp"
+                      scale="7" />
+                    <externalMetadataColumn
+                      refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Blocked]"
+                      dataType="ui1"
+                      name="Blocked" />
+                    <externalMetadataColumn
+                      refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGVJobKey]"
+                      dataType="i4"
+                      name="AGVJobKey" />
+                    <externalMetadataColumn
+                      refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[XLocation]"
+                      dataType="i4"
+                      name="XLocation" />
+                    <externalMetadataColumn
+                      refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[YLocation]"
+                      dataType="i4"
+                      name="YLocation" />
+                    <externalMetadataColumn
+                      refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Direction]"
+                      dataType="i4"
+                      name="Direction" />
+                    <externalMetadataColumn
+                      refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Loaded]"
+                      dataType="ui1"
+                      name="Loaded" />
+                    <externalMetadataColumn
+                      refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[SpeedId]"
+                      dataType="i4"
+                      name="SpeedId" />
+                    <externalMetadataColumn
+                      refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AlertTypeId]"
+                      dataType="i4"
+                      name="AlertTypeId" />
+                    <externalMetadataColumn
+                      refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                      dataType="i4"
+                      name="ErrorCode" />
+                    <externalMetadataColumn
+                      refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                      dataType="i4"
+                      name="ErrorColumn" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
             </component>
             <component
               refId="Package\DF_Alert\LookupAlertTypeId"
@@ -1225,11 +1507,11 @@ where [refTable].[Speed] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\DF_Alert\OLE DB Source"
+              refId="Package\DF_Alert\SA_Alert"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
               description="OLE DB Source"
-              name="OLE DB Source"
+              name="SA_Alert"
               usesDispositions="true"
               version="7">
               <properties>
@@ -1274,7 +1556,7 @@ where [refTable].[Speed] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\DF_Alert\OLE DB Source.Connections[OleDbConnection]"
+                  refId="Package\DF_Alert\SA_Alert.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[(local).AGV_StagingArea]"
                   connectionManagerRefId="Package.ConnectionManagers[(local).AGV_StagingArea]"
                   description="The OLE DB runtime connection used to access the database."
@@ -1282,215 +1564,215 @@ where [refTable].[Speed] = ?</property>
               </connections>
               <outputs>
                 <output
-                  refId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output]"
+                  refId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output]"
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGV]"
+                      refId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].Columns[AGV]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AGV]"
-                      lineageId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGV]"
+                      externalMetadataColumnId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].ExternalColumns[AGV]"
+                      lineageId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].Columns[AGV]"
                       name="AGV"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].Columns[AlertType]"
+                      refId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].Columns[AlertType]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AlertType]"
+                      externalMetadataColumnId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].ExternalColumns[AlertType]"
                       length="50"
-                      lineageId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].Columns[AlertType]"
+                      lineageId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].Columns[AlertType]"
                       name="AlertType"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].Columns[TimeStamp]"
+                      refId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].Columns[TimeStamp]"
                       dataType="dbTimeStamp2"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TimeStamp]"
-                      lineageId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].Columns[TimeStamp]"
+                      externalMetadataColumnId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].ExternalColumns[TimeStamp]"
+                      lineageId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].Columns[TimeStamp]"
                       name="TimeStamp"
                       scale="7"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].Columns[Blocked]"
+                      refId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].Columns[Blocked]"
                       dataType="ui1"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Blocked]"
-                      lineageId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].Columns[Blocked]"
+                      externalMetadataColumnId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].ExternalColumns[Blocked]"
+                      lineageId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].Columns[Blocked]"
                       name="Blocked"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGVJobKey]"
+                      refId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].Columns[AGVJobKey]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AGVJobKey]"
-                      lineageId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGVJobKey]"
+                      externalMetadataColumnId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].ExternalColumns[AGVJobKey]"
+                      lineageId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].Columns[AGVJobKey]"
                       name="AGVJobKey"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].Columns[XLocation]"
+                      refId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].Columns[XLocation]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[XLocation]"
-                      lineageId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].Columns[XLocation]"
+                      externalMetadataColumnId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].ExternalColumns[XLocation]"
+                      lineageId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].Columns[XLocation]"
                       name="XLocation"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].Columns[YLocation]"
+                      refId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].Columns[YLocation]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[YLocation]"
-                      lineageId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].Columns[YLocation]"
+                      externalMetadataColumnId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].ExternalColumns[YLocation]"
+                      lineageId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].Columns[YLocation]"
                       name="YLocation"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].Columns[Direction]"
+                      refId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].Columns[Direction]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Direction]"
-                      lineageId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].Columns[Direction]"
+                      externalMetadataColumnId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].ExternalColumns[Direction]"
+                      lineageId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].Columns[Direction]"
                       name="Direction"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].Columns[Speed]"
+                      refId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].Columns[Speed]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Speed]"
-                      lineageId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].Columns[Speed]"
+                      externalMetadataColumnId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].ExternalColumns[Speed]"
+                      lineageId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].Columns[Speed]"
                       name="Speed"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].Columns[Loaded]"
+                      refId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].Columns[Loaded]"
                       dataType="ui1"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Loaded]"
-                      lineageId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].Columns[Loaded]"
+                      externalMetadataColumnId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].ExternalColumns[Loaded]"
+                      lineageId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].Columns[Loaded]"
                       name="Loaded"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AGV]"
+                      refId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].ExternalColumns[AGV]"
                       dataType="i4"
                       name="AGV" />
                     <externalMetadataColumn
-                      refId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AlertType]"
+                      refId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].ExternalColumns[AlertType]"
                       dataType="wstr"
                       length="50"
                       name="AlertType" />
                     <externalMetadataColumn
-                      refId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TimeStamp]"
+                      refId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].ExternalColumns[TimeStamp]"
                       dataType="dbTimeStamp2"
                       name="TimeStamp"
                       scale="7" />
                     <externalMetadataColumn
-                      refId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Blocked]"
+                      refId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].ExternalColumns[Blocked]"
                       dataType="ui1"
                       name="Blocked" />
                     <externalMetadataColumn
-                      refId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AGVJobKey]"
+                      refId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].ExternalColumns[AGVJobKey]"
                       dataType="i4"
                       name="AGVJobKey" />
                     <externalMetadataColumn
-                      refId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[XLocation]"
+                      refId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].ExternalColumns[XLocation]"
                       dataType="i4"
                       name="XLocation" />
                     <externalMetadataColumn
-                      refId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[YLocation]"
+                      refId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].ExternalColumns[YLocation]"
                       dataType="i4"
                       name="YLocation" />
                     <externalMetadataColumn
-                      refId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Direction]"
+                      refId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].ExternalColumns[Direction]"
                       dataType="i4"
                       name="Direction" />
                     <externalMetadataColumn
-                      refId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Speed]"
+                      refId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].ExternalColumns[Speed]"
                       dataType="i4"
                       name="Speed" />
                     <externalMetadataColumn
-                      refId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Loaded]"
+                      refId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].ExternalColumns[Loaded]"
                       dataType="ui1"
                       name="Loaded" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  refId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Error Output]"
                   isErrorOut="true"
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AGV]"
+                      refId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Error Output].Columns[AGV]"
                       dataType="i4"
-                      lineageId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AGV]"
+                      lineageId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Error Output].Columns[AGV]"
                       name="AGV" />
                     <outputColumn
-                      refId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AlertType]"
+                      refId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Error Output].Columns[AlertType]"
                       dataType="wstr"
                       length="50"
-                      lineageId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AlertType]"
+                      lineageId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Error Output].Columns[AlertType]"
                       name="AlertType" />
                     <outputColumn
-                      refId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TimeStamp]"
+                      refId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Error Output].Columns[TimeStamp]"
                       dataType="dbTimeStamp2"
-                      lineageId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TimeStamp]"
+                      lineageId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Error Output].Columns[TimeStamp]"
                       name="TimeStamp"
                       scale="7" />
                     <outputColumn
-                      refId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Blocked]"
+                      refId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Error Output].Columns[Blocked]"
                       dataType="ui1"
-                      lineageId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Blocked]"
+                      lineageId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Error Output].Columns[Blocked]"
                       name="Blocked" />
                     <outputColumn
-                      refId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AGVJobKey]"
+                      refId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Error Output].Columns[AGVJobKey]"
                       dataType="i4"
-                      lineageId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AGVJobKey]"
+                      lineageId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Error Output].Columns[AGVJobKey]"
                       name="AGVJobKey" />
                     <outputColumn
-                      refId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[XLocation]"
+                      refId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Error Output].Columns[XLocation]"
                       dataType="i4"
-                      lineageId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[XLocation]"
+                      lineageId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Error Output].Columns[XLocation]"
                       name="XLocation" />
                     <outputColumn
-                      refId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[YLocation]"
+                      refId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Error Output].Columns[YLocation]"
                       dataType="i4"
-                      lineageId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[YLocation]"
+                      lineageId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Error Output].Columns[YLocation]"
                       name="YLocation" />
                     <outputColumn
-                      refId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Direction]"
+                      refId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Error Output].Columns[Direction]"
                       dataType="i4"
-                      lineageId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Direction]"
+                      lineageId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Error Output].Columns[Direction]"
                       name="Direction" />
                     <outputColumn
-                      refId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Speed]"
+                      refId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Error Output].Columns[Speed]"
                       dataType="i4"
-                      lineageId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Speed]"
+                      lineageId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Error Output].Columns[Speed]"
                       name="Speed" />
                     <outputColumn
-                      refId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Loaded]"
+                      refId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Error Output].Columns[Loaded]"
                       dataType="ui1"
-                      lineageId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Loaded]"
+                      lineageId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Error Output].Columns[Loaded]"
                       name="Loaded" />
                     <outputColumn
-                      refId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      refId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1525,7 +1807,7 @@ where [refTable].[Speed] = ?</property>
                       refId="Package\DF_Alert\SortByAVG.Inputs[Sort Input].Columns[AGV]"
                       cachedDataType="i4"
                       cachedName="AGV"
-                      lineageId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGV]">
+                      lineageId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].Columns[AGV]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1542,7 +1824,7 @@ where [refTable].[Speed] = ?</property>
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="AlertType"
-                      lineageId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].Columns[AlertType]">
+                      lineageId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].Columns[AlertType]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1559,7 +1841,7 @@ where [refTable].[Speed] = ?</property>
                       cachedDataType="dbTimeStamp2"
                       cachedName="TimeStamp"
                       cachedScale="7"
-                      lineageId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].Columns[TimeStamp]">
+                      lineageId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].Columns[TimeStamp]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1575,7 +1857,7 @@ where [refTable].[Speed] = ?</property>
                       refId="Package\DF_Alert\SortByAVG.Inputs[Sort Input].Columns[Blocked]"
                       cachedDataType="ui1"
                       cachedName="Blocked"
-                      lineageId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].Columns[Blocked]">
+                      lineageId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].Columns[Blocked]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1591,7 +1873,7 @@ where [refTable].[Speed] = ?</property>
                       refId="Package\DF_Alert\SortByAVG.Inputs[Sort Input].Columns[AGVJobKey]"
                       cachedDataType="i4"
                       cachedName="AGVJobKey"
-                      lineageId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGVJobKey]">
+                      lineageId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].Columns[AGVJobKey]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1607,7 +1889,7 @@ where [refTable].[Speed] = ?</property>
                       refId="Package\DF_Alert\SortByAVG.Inputs[Sort Input].Columns[XLocation]"
                       cachedDataType="i4"
                       cachedName="XLocation"
-                      lineageId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].Columns[XLocation]">
+                      lineageId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].Columns[XLocation]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1623,7 +1905,7 @@ where [refTable].[Speed] = ?</property>
                       refId="Package\DF_Alert\SortByAVG.Inputs[Sort Input].Columns[YLocation]"
                       cachedDataType="i4"
                       cachedName="YLocation"
-                      lineageId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].Columns[YLocation]">
+                      lineageId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].Columns[YLocation]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1639,7 +1921,7 @@ where [refTable].[Speed] = ?</property>
                       refId="Package\DF_Alert\SortByAVG.Inputs[Sort Input].Columns[Direction]"
                       cachedDataType="i4"
                       cachedName="Direction"
-                      lineageId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].Columns[Direction]">
+                      lineageId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].Columns[Direction]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1655,7 +1937,7 @@ where [refTable].[Speed] = ?</property>
                       refId="Package\DF_Alert\SortByAVG.Inputs[Sort Input].Columns[Speed]"
                       cachedDataType="i4"
                       cachedName="Speed"
-                      lineageId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].Columns[Speed]">
+                      lineageId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].Columns[Speed]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1671,7 +1953,7 @@ where [refTable].[Speed] = ?</property>
                       refId="Package\DF_Alert\SortByAVG.Inputs[Sort Input].Columns[Loaded]"
                       cachedDataType="ui1"
                       cachedName="Loaded"
-                      lineageId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].Columns[Loaded]">
+                      lineageId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].Columns[Loaded]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1704,7 +1986,7 @@ where [refTable].[Speed] = ?</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGV]}</property>
+                          name="SortColumnId">#{Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].Columns[AGV]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1718,7 +2000,7 @@ where [refTable].[Speed] = ?</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].Columns[AlertType]}</property>
+                          name="SortColumnId">#{Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].Columns[AlertType]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1732,7 +2014,7 @@ where [refTable].[Speed] = ?</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].Columns[TimeStamp]}</property>
+                          name="SortColumnId">#{Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].Columns[TimeStamp]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1745,7 +2027,7 @@ where [refTable].[Speed] = ?</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].Columns[Blocked]}</property>
+                          name="SortColumnId">#{Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].Columns[Blocked]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1758,7 +2040,7 @@ where [refTable].[Speed] = ?</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGVJobKey]}</property>
+                          name="SortColumnId">#{Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].Columns[AGVJobKey]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1771,7 +2053,7 @@ where [refTable].[Speed] = ?</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].Columns[XLocation]}</property>
+                          name="SortColumnId">#{Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].Columns[XLocation]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1784,7 +2066,7 @@ where [refTable].[Speed] = ?</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].Columns[YLocation]}</property>
+                          name="SortColumnId">#{Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].Columns[YLocation]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1797,7 +2079,7 @@ where [refTable].[Speed] = ?</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].Columns[Direction]}</property>
+                          name="SortColumnId">#{Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].Columns[Direction]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1810,7 +2092,7 @@ where [refTable].[Speed] = ?</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].Columns[Speed]}</property>
+                          name="SortColumnId">#{Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].Columns[Speed]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1823,7 +2105,7 @@ where [refTable].[Speed] = ?</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output].Columns[Loaded]}</property>
+                          name="SortColumnId">#{Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output].Columns[Loaded]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -2191,10 +2473,15 @@ where [refTable].[Speed] = ?</property>
               name="Multicast Output 3"
               startId="Package\DF_Alert\Multicast.Outputs[Multicast Output 3]" />
             <path
+              refId="Package\DF_Alert.Paths[OLE DB Destination Error Output]"
+              endId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input]"
+              name="OLE DB Destination Error Output"
+              startId="Package\DF_Alert\DWH_Alert.Outputs[OLE DB Destination Error Output]" />
+            <path
               refId="Package\DF_Alert.Paths[OLE DB Source Output]"
               endId="Package\DF_Alert\SortByAVG.Inputs[Sort Input]"
               name="OLE DB Source Output"
-              startId="Package\DF_Alert\OLE DB Source.Outputs[OLE DB Source Output]" />
+              startId="Package\DF_Alert\SA_Alert.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\DF_Alert.Paths[Sort Output]"
               endId="Package\DF_Alert\Multicast.Inputs[Multicast Input 1]"
@@ -4787,11 +5074,11 @@ where [refTable].[CountryName] = ?</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
+                  name="FastLoadKeepIdentity">true</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
+                  name="FastLoadKeepNulls">true</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
@@ -4830,6 +5117,12 @@ where [refTable].[CountryName] = ?</property>
                       cachedName="SpeedCategory"
                       externalMetadataColumnId="Package\DF_Speed\DWH_Speed.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
                       lineageId="Package\DF_Speed\SA_Speed.Outputs[OLE DB Source Output].Columns[SpeedCategory]" />
+                    <inputColumn
+                      refId="Package\DF_Speed\DWH_Speed.Inputs[OLE DB Destination Input].Columns[Id]"
+                      cachedDataType="i4"
+                      cachedName="Id"
+                      externalMetadataColumnId="Package\DF_Speed\DWH_Speed.Inputs[OLE DB Destination Input].ExternalColumns[Id]"
+                      lineageId="Package\DF_Speed\SA_Speed.Outputs[OLE DB Source Output].Columns[Id]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -5166,6 +5459,28 @@ where [refTable].[CountryName] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="156.5,297">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41"
+              Start="0,0"
+              End="0,33.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
           TopLeft="214,359">
           <EdgeLayout.Curve>
@@ -5267,28 +5582,6 @@ where [refTable].[CountryName] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="156.5,297">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,41"
-              Start="0,0"
-              End="0,33.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,33.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -5296,15 +5589,15 @@ where [refTable].[CountryName] = ?</property>
     design-time-name="Package\DF_AGV">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="117,42"
-          Id="Package\DF_AGV\SA_AGV"
-          TopLeft="97.5,64.5" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="171,42"
           Id="Package\DF_AGV\OLE DB Destination"
           TopLeft="76.5,154.5" />
+        <NodeLayout
+          Size="117,42"
+          Id="Package\DF_AGV\SA_AGV"
+          TopLeft="97.5,64.5" />
         <EdgeLayout
           Id="Package\DF_AGV.Paths[OLE DB Source Output]"
           TopLeft="159,106.5">
@@ -5324,12 +5617,27 @@ where [refTable].[CountryName] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DF_AGV\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\DF_AGV\SA_AGV">
     <Properties>
@@ -5347,7 +5655,11 @@ where [refTable].[CountryName] = ?</property>
     design-time-name="Package\DF_Alert">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="119,42"
+          Id="Package\DF_Alert\SA_Alert"
+          TopLeft="242,34" />
         <NodeLayout
           Size="158,42"
           Id="Package\DF_Alert\Lookup_SpeedId"
@@ -5364,6 +5676,14 @@ where [refTable].[CountryName] = ?</property>
           Size="130,42"
           Id="Package\DF_Alert\SortByAVG"
           TopLeft="243,136" />
+        <NodeLayout
+          Size="168,42"
+          Id="Package\DF_Alert\LookupAlertTypeId"
+          TopLeft="371,343" />
+        <NodeLayout
+          Size="130,42"
+          Id="Package\DF_Alert\Merge Join"
+          TopLeft="248,441" />
         <NodeLayout
           Size="131,42"
           Id="Package\DF_Alert\DWH_Alert"
@@ -5413,46 +5733,8 @@ where [refTable].[CountryName] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_Alert.Paths[Multicast Output 1]"
-          TopLeft="290.333333333333,284">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-77.3333333333333,61"
-              Start="0,0"
-              End="-77.3333333333333,53.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.8815789473684" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.8815789473684"
-                    Point2="0,24.8815789473684"
-                    Point3="-4,24.8815789473684" />
-                  <mssgle:LineSegment
-                    End="-73.3333333333333,24.8815789473684" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-73.3333333333333,24.8815789473684"
-                    Point2="-77.3333333333333,24.8815789473684"
-                    Point3="-77.3333333333333,28.8815789473684" />
-                  <mssgle:LineSegment
-                    End="-77.3333333333333,53.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="150,42"
-          Id="Package\DF_Alert\OLE DB Source"
-          TopLeft="239,34" />
-        <EdgeLayout
           Id="Package\DF_Alert.Paths[OLE DB Source Output]"
-          TopLeft="311,76">
+          TopLeft="304.75,76">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -5472,10 +5754,6 @@ where [refTable].[CountryName] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="168,42"
-          Id="Package\DF_Alert\LookupAlertTypeId"
-          TopLeft="371,343" />
         <EdgeLayout
           Id="Package\DF_Alert.Paths[Multicast Output 3]"
           TopLeft="327.666666666667,284">
@@ -5510,44 +5788,60 @@ where [refTable].[CountryName] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="130,42"
-          Id="Package\DF_Alert\Merge Join"
-          TopLeft="248,441" />
         <EdgeLayout
-          Id="Package\DF_Alert.Paths[Lookup Match Output]"
-          TopLeft="213,387">
+          Id="Package\DF_Alert.Paths[Multicast Output 1]"
+          TopLeft="290.333333333333,284">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="100,54"
+              EndConnector="-77.3333333333333,61"
               Start="0,0"
-              End="100,46.5">
+              End="-77.3333333333333,53.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,23" />
+                    End="0,20.8815789473684" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,23"
-                    Point2="0,27"
-                    Point3="4,27" />
+                    Point1="0,20.8815789473684"
+                    Point2="0,24.8815789473684"
+                    Point3="-4,24.8815789473684" />
                   <mssgle:LineSegment
-                    End="96,27" />
+                    End="-73.3333333333333,24.8815789473684" />
                   <mssgle:CubicBezierSegment
-                    Point1="96,27"
-                    Point2="100,27"
-                    Point3="100,31" />
+                    Point1="-73.3333333333333,24.8815789473684"
+                    Point2="-77.3333333333333,24.8815789473684"
+                    Point3="-77.3333333333333,28.8815789473684" />
                   <mssgle:LineSegment
-                    End="100,46.5" />
+                    End="-77.3333333333333,53.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="1.80861328125,32,96.3827734375,11.609375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_Alert.Paths[Merge Join Output]"
+          TopLeft="315.25,483">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52"
+              Start="0,0"
+              End="0,44.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5587,30 +5881,85 @@ where [refTable].[CountryName] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_Alert.Paths[Merge Join Output]"
-          TopLeft="315.25,483">
+          Id="Package\DF_Alert.Paths[Lookup Match Output]"
+          TopLeft="213,387">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,52"
+              EndConnector="100,54"
               Start="0,0"
-              End="0,44.5">
+              End="100,46.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,44.5" />
+                    End="0,23" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23"
+                    Point2="0,27"
+                    Point3="4,27" />
+                  <mssgle:LineSegment
+                    End="96,27" />
+                  <mssgle:CubicBezierSegment
+                    Point1="96,27"
+                    Point2="100,27"
+                    Point3="100,31" />
+                  <mssgle:LineSegment
+                    End="100,46.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="1.80861328125,32,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="172,42"
+          Id="Package\DF_Alert\Flat File Destination"
+          TopLeft="229,704" />
+        <EdgeLayout
+          Id="Package\DF_Alert.Paths[OLE DB Destination Error Output]"
+          TopLeft="316,645.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58.5"
+              Start="0,0"
+              End="0,51">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,51" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-73.20890625,19.783203125,146.4178125,11.43359375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DF_Alert\SA_Alert">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\DF_Alert\Lookup_SpeedId">
     <Properties>
@@ -5628,6 +5977,29 @@ where [refTable].[CountryName] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DF_Alert\LookupAlertTypeId">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[AlertType]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5653,35 +6025,13 @@ where [refTable].[CountryName] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="162,42"
-          Id="Package\DF_AlertType\SortByDescription"
-          TopLeft="236,137" />
-        <NodeLayout
           Size="142,42"
           Id="Package\DF_AlertType\SA_AlertType"
           TopLeft="35,137" />
-        <EdgeLayout
-          Id="Package\DF_AlertType.Paths[OLE DB Source Output]"
-          TopLeft="177,158">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="59,0"
-              Start="0,0"
-              End="51.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="51.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+        <NodeLayout
+          Size="162,42"
+          Id="Package\DF_AlertType\SortByDescription"
+          TopLeft="236,137" />
         <NodeLayout
           Size="171,42"
           Id="Package\DF_AlertType\OLE DB Destination"
@@ -5708,9 +6058,57 @@ where [refTable].[CountryName] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_AlertType.Paths[OLE DB Source Output]"
+          TopLeft="177,158">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="59,0"
+              Start="0,0"
+              End="51.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="51.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DF_AlertType\SA_AlertType">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DF_AlertType\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\DF_Branch">
     <LayoutInfo>
@@ -5905,25 +6303,29 @@ where [refTable].[CountryName] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="211,42"
-          Id="Package\DF_Customer\SortCountryLookupByCustId"
-          TopLeft="300,299" />
-        <NodeLayout
           Size="142,42"
           Id="Package\DF_Customer\SA_Customer"
           TopLeft="197.5,67.5" />
+        <NodeLayout
+          Size="208,42"
+          Id="Package\DF_Customer\SortBranchLookUpByCustId"
+          TopLeft="35,304" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\DF_Customer\OLE DB Destination"
+          TopLeft="189.5,491.5" />
         <NodeLayout
           Size="160,42"
           Id="Package\DF_Customer\LookupCountryId"
           TopLeft="325,223" />
         <NodeLayout
+          Size="211,42"
+          Id="Package\DF_Customer\SortCountryLookupByCustId"
+          TopLeft="300,299" />
+        <NodeLayout
           Size="120,42"
           Id="Package\DF_Customer\Multicast"
           TopLeft="212,138" />
-        <NodeLayout
-          Size="208,42"
-          Id="Package\DF_Customer\SortBranchLookUpByCustId"
-          TopLeft="35,304" />
         <NodeLayout
           Size="155,42"
           Id="Package\DF_Customer\LookupBranchId"
@@ -5932,6 +6334,78 @@ where [refTable].[CountryName] = ?</property>
           Size="130,42"
           Id="Package\DF_Customer\Merge Join"
           TopLeft="208,411" />
+        <EdgeLayout
+          Id="Package\DF_Customer.Paths[Sort Output1]"
+          TopLeft="405.5,341">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-112.166666666667,70"
+              Start="0,0"
+              End="-112.166666666667,62.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.4893617021277" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,37.4893617021277"
+                    Point2="0,41.4893617021277"
+                    Point3="-4,41.4893617021277" />
+                  <mssgle:LineSegment
+                    End="-108.166666666667,41.4893617021277" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-108.166666666667,41.4893617021277"
+                    Point2="-112.166666666667,41.4893617021277"
+                    Point3="-112.166666666667,45.4893617021277" />
+                  <mssgle:LineSegment
+                    End="-112.166666666667,62.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_Customer.Paths[Sort Output]"
+          TopLeft="139,346">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="113.666666666667,65"
+              Start="0,0"
+              End="113.666666666667,57.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.5258358662614" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,34.5258358662614"
+                    Point2="0,38.5258358662614"
+                    Point3="4,38.5258358662614" />
+                  <mssgle:LineSegment
+                    End="109.666666666667,38.5258358662614" />
+                  <mssgle:CubicBezierSegment
+                    Point1="109.666666666667,38.5258358662614"
+                    Point2="113.666666666667,38.5258358662614"
+                    Point3="113.666666666667,42.5258358662614" />
+                  <mssgle:LineSegment
+                    End="113.666666666667,57.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_Customer.Paths[OLE DB Source Output]"
           TopLeft="270.25,109.5">
@@ -5951,7 +6425,9 @@ where [refTable].[CountryName] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5985,7 +6461,9 @@ where [refTable].[CountryName] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6019,7 +6497,33 @@ where [refTable].[CountryName] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_Customer.Paths[Merge Join Output]"
+          TopLeft="274,453">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,38.5"
+              Start="0,0"
+              End="0,31">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6070,105 +6574,24 @@ where [refTable].[CountryName] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_Customer.Paths[Sort Output1]"
-          TopLeft="405.5,341">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-112.166666666667,70"
-              Start="0,0"
-              End="-112.166666666667,62.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,37.4893617021277" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,37.4893617021277"
-                    Point2="0,41.4893617021277"
-                    Point3="-4,41.4893617021277" />
-                  <mssgle:LineSegment
-                    End="-108.166666666667,41.4893617021277" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-108.166666666667,41.4893617021277"
-                    Point2="-112.166666666667,41.4893617021277"
-                    Point3="-112.166666666667,45.4893617021277" />
-                  <mssgle:LineSegment
-                    End="-112.166666666667,62.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_Customer.Paths[Sort Output]"
-          TopLeft="139,346">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="113.666666666667,65"
-              Start="0,0"
-              End="113.666666666667,57.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,34.5258358662614" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,34.5258358662614"
-                    Point2="0,38.5258358662614"
-                    Point3="4,38.5258358662614" />
-                  <mssgle:LineSegment
-                    End="109.666666666667,38.5258358662614" />
-                  <mssgle:CubicBezierSegment
-                    Point1="109.666666666667,38.5258358662614"
-                    Point2="113.666666666667,38.5258358662614"
-                    Point3="113.666666666667,42.5258358662614" />
-                  <mssgle:LineSegment
-                    End="113.666666666667,57.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="171,42"
-          Id="Package\DF_Customer\OLE DB Destination"
-          TopLeft="189.5,491.5" />
-        <EdgeLayout
-          Id="Package\DF_Customer.Paths[Merge Join Output]"
-          TopLeft="274,453">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,38.5"
-              Start="0,0"
-              End="0,31">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\DF_Customer\SA_Customer">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DF_Customer\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -6287,94 +6710,6 @@ where [refTable].[CountryName] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DF_Customer\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DF_AlertType\SA_AlertType">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DF_AlertType\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DF_AGV\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DF_Alert\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DF_Alert\LookupAlertTypeId">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[AlertType]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
