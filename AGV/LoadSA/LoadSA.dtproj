@@ -26,7 +26,11 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-FGJ3R13</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
+<<<<<<< HEAD
           <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA5RL6eMMQCki25+RN0hGnpwAAAAACAAAAAAAQZgAAAAEAACAAAABpogq9G3Te+HSu9XlX82KVzMKrbxUHGYVLy7f/VAuNKAAAAAAOgAAAAAIAACAAAAAdfgKoz0itB+NJh4hLIT+JR14m8NQkLkisN+UP/2jVDJAAAAA49UGnZIxr4i1TnUJVM3FImh0hHUtkeTc7JGWByDNDWqIcGLu6GyYANZFHr4ZspxZtwbF/Rt2uyJ8sLQjQQ83uxo0JhvBdPrRZNz+5uh8jTw43UYbVfgSXBTQwBKigreNJLFuDpS6zZH0t1DSU4Z7UTFFTaJbUShkyvZFB9GXDX+bCzwAMV1kbMrfemu9OIkxAAAAAskhVmjyUMwKToYayLuQmq5bwylwsyLUJqn6zjAA27X2cCWVRR8lnkvOJ11sEWdpuhE/G6UT2Ss/L+c/KUUe9AA==</SSIS:Property>
+=======
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9rwykmcPT0O0LNNMdVHzpAAAAAACAAAAAAAQZgAAAAEAACAAAADVN20qjelmKkHh5gfEMR+T7zzlBRxAmnnsYc2nYI9e2AAAAAAOgAAAAAIAACAAAACNsX6jp6KCfW32PRcuMCNGe8pU94iKPedn3so7GmpecJAAAABmcSwAUmSj1NFvEJqiqRKm4LqfEl6rAxtyiOeVIdmC1NDceQL+6LL3ba3lXr6wE2IgnEXv8aCZJIHhqO/F7rAFJPRl3rIt2QmEisE4SJpM8bygOI5j5wt3ngXRCsq//EfGz0UMFyAP2NXZ16smZovznnkQ0nqSW7apoFRUqxycBVEWy0GsiNi0MwlX81vTrqlAAAAANOGJzlqDCEl2blY5S3/x0U/TojyFaUYC194IBzN5KzKd8+2gkDTM910lmElcKXyI1zJD7lDFXkNbxPqjeDZNfA==</SSIS:Property>
+>>>>>>> 8fbe086d62b0fb4770c61f1992c99a99e1ce5837
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -251,7 +255,11 @@
           <ConfigurationSetting>
             <Id>LastModifiedTime</Id>
             <Name>LastModifiedTime</Name>
+<<<<<<< HEAD
             <Value xsi:type="xsd:dateTime">2019-01-08T12:14:29.092515Z</Value>
+=======
+            <Value xsi:type="xsd:dateTime">2019-01-08T09:19:16.2888212Z</Value>
+>>>>>>> 8fbe086d62b0fb4770c61f1992c99a99e1ce5837
           </ConfigurationSetting>
         </ParameterConfigurationValues>
       </Options>
