@@ -7,12 +7,12 @@
   DTS:CreatorName="LAPTOP-9OVFP3DM\ecore"
   DTS:DTSID="{4883C840-D87A-41C8-8456-29BE39386447}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="15.0.0900.40"
+  DTS:LastModifiedProductVersion="14.0.0800.90"
   DTS:LocaleID="2057"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="39"
-  DTS:VersionGUID="{6F7018E4-DBEA-4311-B96A-E7DE0A451C9A}">
+  DTS:VersionBuild="46"
+  DTS:VersionGUID="{6F9B212C-70E5-4766-80DF-F03DB5129768}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -329,7 +329,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -372,7 +372,7 @@
                 <input
                   refId="Package\DF_AGV\OLE DB Destination.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
+                  errorRowDisposition="RedirectRow"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
@@ -484,7 +484,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -690,7 +690,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -876,171 +876,6 @@
               </outputs>
             </component>
             <component
-              refId="Package\DF_Alert\Flat File Destination"
-              componentClassID="Microsoft.FlatFileDestination"
-              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Flat File Destination"
-              localeId="2057"
-              name="Flat File Destination">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Specifies whether the data will overwrite or append to the destination file."
-                  name="Overwrite">true</property>
-                <property
-                  dataType="System.Null"
-                  description="Specifies the text to write to the destination file before any data is written."
-                  expressionType="Notify"
-                  name="Header" />
-                <property
-                  dataType="System.Boolean"
-                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
-                  name="EscapeQualifier">false</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\DF_Alert\Flat File Destination.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DF_Alert_Errorflow]"
-                  connectionManagerRefId="Package.ConnectionManagers[DF_Alert_Errorflow]"
-                  name="FlatFileConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input]"
-                  hasSideEffects="true"
-                  name="Flat File Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].Columns[AGV]"
-                      cachedDataType="i4"
-                      cachedName="AGV"
-                      externalMetadataColumnId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGV]"
-                      lineageId="Package\DF_Alert\SortByTimeStamp.Outputs[Sort Output].Columns[AGV]" />
-                    <inputColumn
-                      refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].Columns[TimeStamp]"
-                      cachedDataType="dbTimeStamp2"
-                      cachedName="TimeStamp"
-                      cachedScale="7"
-                      cachedSortKeyPosition="1"
-                      externalMetadataColumnId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[TimeStamp]"
-                      lineageId="Package\DF_Alert\SortByTimeStamp.Outputs[Sort Output].Columns[TimeStamp]" />
-                    <inputColumn
-                      refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].Columns[Blocked]"
-                      cachedDataType="ui1"
-                      cachedName="Blocked"
-                      externalMetadataColumnId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Blocked]"
-                      lineageId="Package\DF_Alert\SortByTimeStamp.Outputs[Sort Output].Columns[Blocked]" />
-                    <inputColumn
-                      refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].Columns[AGVJobKey]"
-                      cachedDataType="i4"
-                      cachedName="AGVJobKey"
-                      externalMetadataColumnId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGVJobKey]"
-                      lineageId="Package\DF_Alert\SortByTimeStamp.Outputs[Sort Output].Columns[AGVJobKey]" />
-                    <inputColumn
-                      refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].Columns[XLocation]"
-                      cachedDataType="i4"
-                      cachedName="XLocation"
-                      externalMetadataColumnId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[XLocation]"
-                      lineageId="Package\DF_Alert\SortByTimeStamp.Outputs[Sort Output].Columns[XLocation]" />
-                    <inputColumn
-                      refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].Columns[YLocation]"
-                      cachedDataType="i4"
-                      cachedName="YLocation"
-                      externalMetadataColumnId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[YLocation]"
-                      lineageId="Package\DF_Alert\SortByTimeStamp.Outputs[Sort Output].Columns[YLocation]" />
-                    <inputColumn
-                      refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].Columns[Direction]"
-                      cachedDataType="i4"
-                      cachedName="Direction"
-                      externalMetadataColumnId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Direction]"
-                      lineageId="Package\DF_Alert\SortByTimeStamp.Outputs[Sort Output].Columns[Direction]" />
-                    <inputColumn
-                      refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].Columns[Loaded]"
-                      cachedDataType="ui1"
-                      cachedName="Loaded"
-                      externalMetadataColumnId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Loaded]"
-                      lineageId="Package\DF_Alert\SortByTimeStamp.Outputs[Sort Output].Columns[Loaded]" />
-                    <inputColumn
-                      refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].Columns[SpeedId]"
-                      cachedDataType="i4"
-                      cachedName="SpeedId"
-                      externalMetadataColumnId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[SpeedId]"
-                      lineageId="Package\DF_Alert\SortByTimeStamp.Outputs[Sort Output].Columns[SpeedId]" />
-                    <inputColumn
-                      refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].Columns[AlertTypeId]"
-                      cachedDataType="i4"
-                      cachedName="AlertTypeId"
-                      externalMetadataColumnId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AlertTypeId]"
-                      lineageId="Package\DF_Alert\SortByTimeStamp.Outputs[Sort Output].Columns[AlertTypeId]" />
-                    <inputColumn
-                      refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].Columns[ErrorCode]"
-                      cachedDataType="i4"
-                      cachedName="ErrorCode"
-                      externalMetadataColumnId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
-                      lineageId="Package\DF_Alert\DWH_Alert.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]" />
-                    <inputColumn
-                      refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].Columns[ErrorColumn]"
-                      cachedDataType="i4"
-                      cachedName="ErrorColumn"
-                      externalMetadataColumnId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
-                      lineageId="Package\DF_Alert\DWH_Alert.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGV]"
-                      dataType="i4"
-                      name="AGV" />
-                    <externalMetadataColumn
-                      refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[TimeStamp]"
-                      dataType="dbTimeStamp2"
-                      name="TimeStamp"
-                      scale="7" />
-                    <externalMetadataColumn
-                      refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Blocked]"
-                      dataType="ui1"
-                      name="Blocked" />
-                    <externalMetadataColumn
-                      refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGVJobKey]"
-                      dataType="i4"
-                      name="AGVJobKey" />
-                    <externalMetadataColumn
-                      refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[XLocation]"
-                      dataType="i4"
-                      name="XLocation" />
-                    <externalMetadataColumn
-                      refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[YLocation]"
-                      dataType="i4"
-                      name="YLocation" />
-                    <externalMetadataColumn
-                      refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Direction]"
-                      dataType="i4"
-                      name="Direction" />
-                    <externalMetadataColumn
-                      refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Loaded]"
-                      dataType="ui1"
-                      name="Loaded" />
-                    <externalMetadataColumn
-                      refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[SpeedId]"
-                      dataType="i4"
-                      name="SpeedId" />
-                    <externalMetadataColumn
-                      refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AlertTypeId]"
-                      dataType="i4"
-                      name="AlertTypeId" />
-                    <externalMetadataColumn
-                      refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
-                      dataType="i4"
-                      name="ErrorCode" />
-                    <externalMetadataColumn
-                      refId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
-                      dataType="i4"
-                      name="ErrorColumn" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-            </component>
-            <component
               refId="Package\DF_Alert\LookupAlertTypeId"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
@@ -1054,13 +889,13 @@
                   description="Specifies the SQL statement that generates the lookup table."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[AlertType]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[AlertType]</property>
                 <property
                   dataType="System.String"
                   description="Specifies a SQL statement that uses parameters to generate the lookup table."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[AlertType]) [refTable]
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[AlertType]) [refTable]
 where [refTable].[Description] = ?</property>
                 <property
                   dataType="System.Int32"
@@ -1213,13 +1048,13 @@ where [refTable].[Description] = ?</property>
                   description="Specifies the SQL statement that generates the lookup table."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[Speed]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Speed]</property>
                 <property
                   dataType="System.String"
                   description="Specifies a SQL statement that uses parameters to generate the lookup table."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[Speed]) [refTable]
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Speed]) [refTable]
 where [refTable].[Speed] = ?</property>
                 <property
                   dataType="System.Int32"
@@ -1665,7 +1500,7 @@ where [refTable].[Speed] = ?</property>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -2607,11 +2442,6 @@ where [refTable].[Speed] = ?</property>
               name="Multicast Output 3"
               startId="Package\DF_Alert\Multicast.Outputs[Multicast Output 3]" />
             <path
-              refId="Package\DF_Alert.Paths[OLE DB Destination Error Output]"
-              endId="Package\DF_Alert\Flat File Destination.Inputs[Flat File Destination Input]"
-              name="OLE DB Destination Error Output"
-              startId="Package\DF_Alert\DWH_Alert.Outputs[OLE DB Destination Error Output]" />
-            <path
               refId="Package\DF_Alert.Paths[OLE DB Source Output]"
               endId="Package\DF_Alert\SortByAVG.Inputs[Sort Input]"
               name="OLE DB Source Output"
@@ -2669,7 +2499,7 @@ where [refTable].[Speed] = ?</property>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -2815,7 +2645,7 @@ where [refTable].[Speed] = ?</property>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -3165,7 +2995,7 @@ where [refTable].[Speed] = ?</property>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -3208,7 +3038,7 @@ where [refTable].[Speed] = ?</property>
                 <input
                   refId="Package\DF_Branch\OLE DB Destination.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
+                  errorRowDisposition="RedirectRow"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
@@ -3285,7 +3115,7 @@ where [refTable].[Speed] = ?</property>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -3554,7 +3384,7 @@ where [refTable].[Speed] = ?</property>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -3597,7 +3427,7 @@ where [refTable].[Speed] = ?</property>
                 <input
                   refId="Package\DF_Country\DWH_Country.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
+                  errorRowDisposition="RedirectRow"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
@@ -3674,7 +3504,7 @@ where [refTable].[Speed] = ?</property>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -3932,13 +3762,13 @@ where [refTable].[Speed] = ?</property>
                   description="Specifies the SQL statement that generates the lookup table."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[Branch]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Branch]</property>
                 <property
                   dataType="System.String"
                   description="Specifies a SQL statement that uses parameters to generate the lookup table."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[Branch]) [refTable]
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Branch]) [refTable]
 where [refTable].[BranchName] = ?</property>
                 <property
                   dataType="System.Int32"
@@ -4091,13 +3921,13 @@ where [refTable].[BranchName] = ?</property>
                   description="Specifies the SQL statement that generates the lookup table."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[Country]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Country]</property>
                 <property
                   dataType="System.String"
                   description="Specifies a SQL statement that uses parameters to generate the lookup table."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[Country]) [refTable]
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Country]) [refTable]
 where [refTable].[CountryName] = ?</property>
                 <property
                   dataType="System.Int32"
@@ -4436,7 +4266,7 @@ where [refTable].[CountryName] = ?</property>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -4479,7 +4309,7 @@ where [refTable].[CountryName] = ?</property>
                 <input
                   refId="Package\DF_Customer\OLE DB Destination.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
+                  errorRowDisposition="RedirectRow"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
@@ -4582,7 +4412,7 @@ where [refTable].[CountryName] = ?</property>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -5191,7 +5021,7 @@ where [refTable].[CountryName] = ?</property>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -5234,7 +5064,7 @@ where [refTable].[CountryName] = ?</property>
                 <input
                   refId="Package\DF_Speed\DWH_Speed.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
+                  errorRowDisposition="RedirectRow"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
@@ -5326,7 +5156,7 @@ where [refTable].[CountryName] = ?</property>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -5723,7 +5553,7 @@ where [refTable].[CountryName] = ?</property>
     design-time-name="Package\DF_AGV">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="171,42"
           Id="Package\DF_AGV\OLE DB Destination"
@@ -5751,9 +5581,7 @@ where [refTable].[CountryName] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -5789,7 +5617,11 @@ where [refTable].[CountryName] = ?</property>
     design-time-name="Package\DF_Alert">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="131,42"
+          Id="Package\DF_Alert\DWH_Alert"
+          TopLeft="251.5,603.5" />
         <NodeLayout
           Size="119,42"
           Id="Package\DF_Alert\SA_Alert"
@@ -5811,17 +5643,141 @@ where [refTable].[CountryName] = ?</property>
           Id="Package\DF_Alert\SortByAVG"
           TopLeft="243,136" />
         <NodeLayout
-          Size="168,42"
+          Size="171,42"
           Id="Package\DF_Alert\LookupAlertTypeId"
           TopLeft="371,343" />
         <NodeLayout
           Size="130,42"
           Id="Package\DF_Alert\Merge Join"
           TopLeft="248,441" />
-        <NodeLayout
-          Size="131,42"
-          Id="Package\DF_Alert\DWH_Alert"
-          TopLeft="251.5,603.5" />
+        <EdgeLayout
+          Id="Package\DF_Alert.Paths[Multicast Output 1]"
+          TopLeft="290.333333333333,284">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-77.3333333333333,61"
+              Start="0,0"
+              End="-77.3333333333333,53.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.8815789473684" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.8815789473684"
+                    Point2="0,24.8815789473684"
+                    Point3="-4,24.8815789473684" />
+                  <mssgle:LineSegment
+                    End="-73.3333333333333,24.8815789473684" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-73.3333333333333,24.8815789473684"
+                    Point2="-77.3333333333333,24.8815789473684"
+                    Point3="-77.3333333333333,28.8815789473684" />
+                  <mssgle:LineSegment
+                    End="-77.3333333333333,53.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_Alert.Paths[Merge Join Output]"
+          TopLeft="315.25,483">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52"
+              Start="0,0"
+              End="0,44.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_Alert.Paths[Lookup Match Output1]"
+          TopLeft="456.5,385">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-123.166666666667,56"
+              Start="0,0"
+              End="-123.166666666667,48.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.1914893617021" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29.1914893617021"
+                    Point2="0,33.1914893617021"
+                    Point3="-4,33.1914893617021" />
+                  <mssgle:LineSegment
+                    End="-119.166666666667,33.1914893617021" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-119.166666666667,33.1914893617021"
+                    Point2="-123.166666666667,33.1914893617021"
+                    Point3="-123.166666666667,37.1914893617021" />
+                  <mssgle:LineSegment
+                    End="-123.166666666667,48.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-109.774720052083,38.1914893617021,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_Alert.Paths[Lookup Match Output]"
+          TopLeft="213,387">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="100,54"
+              Start="0,0"
+              End="100,46.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23"
+                    Point2="0,27"
+                    Point3="4,27" />
+                  <mssgle:LineSegment
+                    End="96,27" />
+                  <mssgle:CubicBezierSegment
+                    Point1="96,27"
+                    Point2="100,27"
+                    Point3="100,31" />
+                  <mssgle:LineSegment
+                    End="100,46.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="1.80861328125,32,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_Alert.Paths[Sort Output1]"
           TopLeft="317.25,577">
@@ -5894,9 +5850,9 @@ where [refTable].[CountryName] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="127.333333333333,59"
+              EndConnector="128.833333333333,59"
               Start="0,0"
-              End="127.333333333333,51.5">
+              End="128.833333333333,51.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -5907,180 +5863,37 @@ where [refTable].[CountryName] = ?</property>
                     Point2="0,24.0657894736842"
                     Point3="4,24.0657894736842" />
                   <mssgle:LineSegment
-                    End="123.333333333333,24.0657894736842" />
+                    End="124.833333333333,24.0657894736842" />
                   <mssgle:CubicBezierSegment
-                    Point1="123.333333333333,24.0657894736842"
-                    Point2="127.333333333333,24.0657894736842"
-                    Point3="127.333333333333,28.0657894736842" />
+                    Point1="124.833333333333,24.0657894736842"
+                    Point2="128.833333333333,24.0657894736842"
+                    Point3="128.833333333333,28.0657894736842" />
                   <mssgle:LineSegment
-                    End="127.333333333333,51.5" />
+                    End="128.833333333333,51.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_Alert.Paths[Multicast Output 1]"
-          TopLeft="290.333333333333,284">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-77.3333333333333,61"
-              Start="0,0"
-              End="-77.3333333333333,53.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.8815789473684" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.8815789473684"
-                    Point2="0,24.8815789473684"
-                    Point3="-4,24.8815789473684" />
-                  <mssgle:LineSegment
-                    End="-73.3333333333333,24.8815789473684" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-73.3333333333333,24.8815789473684"
-                    Point2="-77.3333333333333,24.8815789473684"
-                    Point3="-77.3333333333333,28.8815789473684" />
-                  <mssgle:LineSegment
-                    End="-77.3333333333333,53.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_Alert.Paths[Merge Join Output]"
-          TopLeft="315.25,483">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,52"
-              Start="0,0"
-              End="0,44.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,44.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_Alert.Paths[Lookup Match Output1]"
-          TopLeft="455,385">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-121.666666666667,56"
-              Start="0,0"
-              End="-121.666666666667,48.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,29.1914893617021" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,29.1914893617021"
-                    Point2="0,33.1914893617021"
-                    Point3="-4,33.1914893617021" />
-                  <mssgle:LineSegment
-                    End="-117.666666666667,33.1914893617021" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-117.666666666667,33.1914893617021"
-                    Point2="-121.666666666667,33.1914893617021"
-                    Point3="-121.666666666667,37.1914893617021" />
-                  <mssgle:LineSegment
-                    End="-121.666666666667,48.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-109.024720052083,38.1914893617021,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_Alert.Paths[Lookup Match Output]"
-          TopLeft="213,387">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="100,54"
-              Start="0,0"
-              End="100,46.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,23" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,23"
-                    Point2="0,27"
-                    Point3="4,27" />
-                  <mssgle:LineSegment
-                    End="96,27" />
-                  <mssgle:CubicBezierSegment
-                    Point1="96,27"
-                    Point2="100,27"
-                    Point3="100,31" />
-                  <mssgle:LineSegment
-                    End="100,46.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="1.80861328125,32,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="172,42"
-          Id="Package\DF_Alert\Flat File Destination"
-          TopLeft="234,694" />
-        <EdgeLayout
-          Id="Package\DF_Alert.Paths[OLE DB Destination Error Output]"
-          TopLeft="318.5,645.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,48.5"
-              Start="0,0"
-              End="0,41">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,41" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-73.20890625,14.783203125,146.4178125,11.43359375"
-              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DF_Alert\DWH_Alert">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\DF_Alert\SA_Alert">
     <Properties>
@@ -6133,23 +5946,10 @@ where [refTable].[CountryName] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DF_Alert\DWH_Alert">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -6247,7 +6047,7 @@ where [refTable].[CountryName] = ?</property>
     design-time-name="Package\DF_Branch">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="171,42"
           Id="Package\DF_Branch\OLE DB Destination"
@@ -6279,9 +6079,7 @@ where [refTable].[CountryName] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6303,9 +6101,7 @@ where [refTable].[CountryName] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -6341,7 +6137,7 @@ where [refTable].[CountryName] = ?</property>
     design-time-name="Package\DF_Country">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="146,42"
           Id="Package\DF_Country\DWH_Country"
@@ -6373,9 +6169,7 @@ where [refTable].[CountryName] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6397,9 +6191,7 @@ where [refTable].[CountryName] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -6499,9 +6291,7 @@ where [refTable].[CountryName] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6535,9 +6325,7 @@ where [refTable].[CountryName] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6559,9 +6347,7 @@ where [refTable].[CountryName] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6595,9 +6381,7 @@ where [refTable].[CountryName] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6631,9 +6415,7 @@ where [refTable].[CountryName] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6655,9 +6437,7 @@ where [refTable].[CountryName] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout

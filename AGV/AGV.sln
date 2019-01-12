@@ -1,13 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.168
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StagingAPI", "WebApplication1\StagingAPI.csproj", "{FB2C9A03-31B6-45A1-AA1A-E2B0394A9C78}"
 EndProject
 Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "LoadDWH", "LoadDWH\LoadDWH.dtproj", "{DB2953B8-E175-4F69-AD24-8DC64622FEF9}"
 EndProject
-Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "LoadSA", "LoadSA\LoadSA.dtproj", "{219160C1-C01E-417B-B6EA-37D3AA6237D0}"
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "LoadSATemp", "LoadSA\LoadSATemp.dtproj", "{219160C1-C01E-417B-B6EA-37D3AA6237D0}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "SA", "SA\SA.dtproj", "{1FC989C7-D6F2-47F4-97B8-52E9AF215B8B}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "DWHToDatasets", "DWHToDatasets\DWHToDatasets.dtproj", "{58B39D11-CB9B-4EA5-BE5B-A82AF4F3EB92}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,6 +38,18 @@ Global
 		{219160C1-C01E-417B-B6EA-37D3AA6237D0}.Development|Any CPU.Build.0 = Development
 		{219160C1-C01E-417B-B6EA-37D3AA6237D0}.Release|Any CPU.ActiveCfg = Development
 		{219160C1-C01E-417B-B6EA-37D3AA6237D0}.Release|Any CPU.Build.0 = Development
+		{1FC989C7-D6F2-47F4-97B8-52E9AF215B8B}.Debug|Any CPU.ActiveCfg = Development
+		{1FC989C7-D6F2-47F4-97B8-52E9AF215B8B}.Debug|Any CPU.Build.0 = Development
+		{1FC989C7-D6F2-47F4-97B8-52E9AF215B8B}.Development|Any CPU.ActiveCfg = Development
+		{1FC989C7-D6F2-47F4-97B8-52E9AF215B8B}.Development|Any CPU.Build.0 = Development
+		{1FC989C7-D6F2-47F4-97B8-52E9AF215B8B}.Release|Any CPU.ActiveCfg = Development
+		{1FC989C7-D6F2-47F4-97B8-52E9AF215B8B}.Release|Any CPU.Build.0 = Development
+		{58B39D11-CB9B-4EA5-BE5B-A82AF4F3EB92}.Debug|Any CPU.ActiveCfg = Development
+		{58B39D11-CB9B-4EA5-BE5B-A82AF4F3EB92}.Debug|Any CPU.Build.0 = Development
+		{58B39D11-CB9B-4EA5-BE5B-A82AF4F3EB92}.Development|Any CPU.ActiveCfg = Development
+		{58B39D11-CB9B-4EA5-BE5B-A82AF4F3EB92}.Development|Any CPU.Build.0 = Development
+		{58B39D11-CB9B-4EA5-BE5B-A82AF4F3EB92}.Release|Any CPU.ActiveCfg = Development
+		{58B39D11-CB9B-4EA5-BE5B-A82AF4F3EB92}.Release|Any CPU.Build.0 = Development
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
