@@ -1,0 +1,192 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="eba6b2e7-a7f5-46b3-985c-8f6e957f5d8a" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>FinancialManagerDSV</ID>
+  <Name>FinancialManagerDSV</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>AGV Data Warehouse</DataSourceID>
+  <Schema>
+    <xs:schema id="FinancialManagerDSV" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="FinancialManagerDSV" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="9ac5a084-9c4e-4b3b-9069-92dfa0e36057">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_AGV" msprop:design-time-name="de76d52c-6d86-4237-ba39-30cb530bbcde" msprop:DbTableName="AGV" msprop:FriendlyName="AGV" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Id" msprop:design-time-name="1129e605-c7b4-4a5b-aad1-65007adfe8db" msprop:DbColumnName="Id" msprop:FriendlyName="Id" type="xs:int" />
+                  <xs:element name="CustomerId" msprop:design-time-name="b5804033-a662-4083-8466-e4a00c1be629" msprop:DbColumnName="CustomerId" msprop:FriendlyName="CustomerId" type="xs:int" />
+                  <xs:element name="IdentificationNr" msprop:design-time-name="ee6de8c1-565f-4cee-a702-dcecaca7161f" msprop:DbColumnName="IdentificationNr" msprop:FriendlyName="IdentificationNr">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DateInProduction" msprop:design-time-name="6e003096-fb55-4d3c-a24a-6c24ce6c4f01" msprop:DbColumnName="DateInProduction" msprop:FriendlyName="DateInProduction" type="xs:dateTime" />
+                  <xs:element name="DateOutProduction" msprop:design-time-name="7f59d530-3e16-4458-9f0d-4c3d4dfbcd97" msprop:DbColumnName="DateOutProduction" msprop:FriendlyName="DateOutProduction" type="xs:dateTime" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Alert" msprop:design-time-name="d716c00e-a9e9-489e-8f0d-d74bf515bc1f" msprop:DbTableName="Alert" msprop:FriendlyName="Alert" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="f95a346a-807c-41da-a9fe-3dd1726d40da" msprop:DbColumnName="Id" msprop:FriendlyName="Id" type="xs:int" />
+                  <xs:element name="Timestamp" msprop:design-time-name="05f90688-8075-4031-9ec2-87c16e4b7fd2" msprop:DbColumnName="Timestamp" msprop:FriendlyName="Timestamp" type="xs:dateTime" />
+                  <xs:element name="XLocation" msprop:design-time-name="35d2a594-0856-4286-a79d-078cb3f8091c" msprop:DbColumnName="XLocation" msprop:FriendlyName="XLocation" type="xs:int" />
+                  <xs:element name="YLocation" msprop:design-time-name="79d32f32-dc8e-4298-b034-c2bc19edfbe7" msprop:DbColumnName="YLocation" msprop:FriendlyName="YLocation" type="xs:int" />
+                  <xs:element name="Direction" msprop:design-time-name="0a980c9b-f61d-455f-af6d-835937e2cecc" msprop:DbColumnName="Direction" msprop:FriendlyName="Direction" type="xs:int" />
+                  <xs:element name="IsLoaded" msprop:design-time-name="520ed144-b652-4f4d-8766-9478347679f5" msprop:DbColumnName="IsLoaded" msprop:FriendlyName="IsLoaded" type="xs:unsignedByte" />
+                  <xs:element name="IsBlocked" msprop:design-time-name="429a27c5-c9fc-4881-9bea-438560e418c6" msprop:DbColumnName="IsBlocked" msprop:FriendlyName="IsBlocked" type="xs:unsignedByte" />
+                  <xs:element name="JobId" msprop:design-time-name="90213095-ecda-4a6d-bec8-558a591d0475" msprop:DbColumnName="JobId" msprop:FriendlyName="JobId" type="xs:int" />
+                  <xs:element name="AgvId" msprop:design-time-name="241daab5-71e3-43de-bd83-4f2c1eaebe5c" msprop:DbColumnName="AgvId" msprop:FriendlyName="AgvId" type="xs:int" />
+                  <xs:element name="SpeedId" msprop:design-time-name="f140487c-25bc-4aa0-81ee-67f1bb2ea319" msprop:DbColumnName="SpeedId" msprop:FriendlyName="SpeedId" type="xs:int" />
+                  <xs:element name="AlertTypeId" msprop:design-time-name="aa8cfcef-00b4-4991-bbec-e33086d218f3" msprop:DbColumnName="AlertTypeId" msprop:FriendlyName="AlertTypeId" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_AlertType" msprop:design-time-name="51269826-bf94-4b40-84fb-7688485961fc" msprop:DbTableName="AlertType" msprop:FriendlyName="AlertType" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Id" msprop:design-time-name="c59d37dc-cef2-4530-bc91-4f8da1f4c2cf" msprop:DbColumnName="Id" msprop:FriendlyName="Id" type="xs:int" />
+                  <xs:element name="Description" msprop:design-time-name="9938e26f-1752-4232-85a5-9a54277ee66b" msprop:DbColumnName="Description" msprop:FriendlyName="Description">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="IsEnvironmental" msprop:design-time-name="77cd70f0-aae5-49a1-8eec-1e121685dfa7" msprop:DbColumnName="IsEnvironmental" msprop:FriendlyName="IsEnvironmental" type="xs:unsignedByte" />
+                  <xs:element name="IsBlocking" msprop:design-time-name="f98ba77d-ca25-43ec-8df9-995afb0c47ca" msprop:DbColumnName="IsBlocking" msprop:FriendlyName="IsBlocking" type="xs:unsignedByte" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Branch" msprop:design-time-name="76a23ee6-b4fd-43a2-a342-72734670f565" msprop:DbTableName="Branch" msprop:FriendlyName="Branch" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="4934376f-e8d0-4b07-b3e1-54d71f1f2bcb" msprop:DbColumnName="Id" msprop:FriendlyName="Id" type="xs:int" />
+                  <xs:element name="BranchName" msprop:design-time-name="bcc07a1d-156f-47cd-a7cf-e92b4c4713e8" msprop:DbColumnName="BranchName" msprop:FriendlyName="BranchName">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Country" msprop:design-time-name="73f6490d-e2c0-4a2f-a83b-baf4facbc770" msprop:DbTableName="Country" msprop:FriendlyName="Country" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="9c815526-1b53-4843-8f84-d362437115c2" msprop:DbColumnName="Id" msprop:FriendlyName="Id" type="xs:int" />
+                  <xs:element name="CountryName" msprop:design-time-name="b1b5b6cc-082e-4451-b388-d051176faaa6" msprop:DbColumnName="CountryName" msprop:FriendlyName="CountryName">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Customer" msprop:design-time-name="a63c62ef-8dd4-4634-8172-d74e62e34213" msprop:DbTableName="Customer" msprop:FriendlyName="Customer" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Id" msprop:design-time-name="559253b6-2a93-4541-a6d6-c5d00d95074e" msprop:DbColumnName="Id" msprop:FriendlyName="Id" type="xs:int" />
+                  <xs:element name="CustomerName" msprop:design-time-name="341f951c-77a3-4cff-8692-b7eeeff8e1cb" msprop:DbColumnName="CustomerName" msprop:FriendlyName="CustomerName">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CountryId" msprop:design-time-name="826dbb92-e386-4771-b8a0-3830bb841427" msprop:DbColumnName="CountryId" msprop:FriendlyName="CountryId" type="xs:int" />
+                  <xs:element name="BranchId" msprop:design-time-name="c33febe2-4755-448b-88ed-f1483ceb969c" msprop:DbColumnName="BranchId" msprop:FriendlyName="BranchId" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_AGV" />
+          <xs:field xpath="Id" />
+        </xs:unique>
+        <xs:unique name="dbo_Alert_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Alert" />
+          <xs:field xpath="Id" />
+        </xs:unique>
+        <xs:unique name="dbo_AlertType_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_AlertType" />
+          <xs:field xpath="Id" />
+        </xs:unique>
+        <xs:unique name="dbo_Branch_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Branch" />
+          <xs:field xpath="Id" />
+        </xs:unique>
+        <xs:unique name="dbo_Country_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Country" />
+          <xs:field xpath="Id" />
+        </xs:unique>
+        <xs:unique name="dbo_Customer_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Customer" />
+          <xs:field xpath="Id" />
+        </xs:unique>
+        <xs:keyref name="FK_Customer_Branch" refer="dbo_Branch_Constraint1">
+          <xs:selector xpath=".//dbo_Customer" />
+          <xs:field xpath="BranchId" />
+        </xs:keyref>
+        <xs:keyref name="FK_Customer_Country" refer="dbo_Country_Constraint1">
+          <xs:selector xpath=".//dbo_Customer" />
+          <xs:field xpath="CountryId" />
+        </xs:keyref>
+        <xs:keyref name="FK_Alert_AGV" refer="Constraint1">
+          <xs:selector xpath=".//dbo_Alert" />
+          <xs:field xpath="AgvId" />
+        </xs:keyref>
+        <xs:keyref name="FK_Alert_AlertType" refer="dbo_AlertType_Constraint1">
+          <xs:selector xpath=".//dbo_Alert" />
+          <xs:field xpath="AlertTypeId" />
+        </xs:keyref>
+        <xs:keyref name="FK_AGV_Customer" refer="dbo_Customer_Constraint1">
+          <xs:selector xpath=".//dbo_AGV" />
+          <xs:field xpath="CustomerId" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <FinancialManagerDSV xmlns="" />
+  </Schema>
+</DataSourceView>

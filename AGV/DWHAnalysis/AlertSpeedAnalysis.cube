@@ -1,0 +1,397 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="9e467973-cbc9-49e4-aac8-cadc58915eb7" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>AlertSpeedAnalysis</ID>
+  <Name>AlertSpeedAnalysis</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="c2432b9f-4ac2-48b0-a1a1-f7d740c9ceec">
+      <ID>AGV</ID>
+      <Name>AGV</Name>
+      <DimensionID>AGV</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="26704c90-1de7-4ef6-87b4-045d9cdddc2a">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="e8981603-27f1-4856-b9ec-144dd84cbaab">
+      <ID>Alert Type</ID>
+      <Name>Alert Type</Name>
+      <DimensionID>Alert Type</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="72e2b688-1409-43dc-8a6b-bc1141324b31">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="d23e41a6-d323-41db-920b-de330b260fae">
+      <ID>Speed</ID>
+      <Name>Speed</Name>
+      <DimensionID>Speed</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="6a699662-e170-40b1-a3ac-cd6b396b0e66">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="1932a2e4-706a-467a-ba99-97ea42ed118a">
+      <ID>AGV</ID>
+      <Name>AGV</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="97c132c7-8d18-424e-87a3-d7d574728a18">
+          <ID>AGV Count</ID>
+          <Name>AGV Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="f7d3d706-f3e7-4c9e-bc7c-69e8d8d3a36b">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="5dac766f-d5e4-4e5c-8f47-5d88030af7e3">
+              <TableID>dbo_AGV</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="0d5e63f5-55f6-49df-9681-a0a8020819e3">
+          <CubeDimensionID>AGV</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="53a75626-349f-4743-9ebc-116e0b474a28">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="d24a91eb-c720-470d-a82f-0ab03b268704">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="15081708-c8f1-4954-8b8c-5f1239e0dadc">
+                    <TableID>dbo_AGV</TableID>
+                    <ColumnID>Id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="c00d3cc2-c2c1-4c69-8010-e27339437c21">
+      <ID>Alert</ID>
+      <Name>Alert</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="84001397-0a42-4f7c-9c39-a3220e1638b1">
+          <ID>X Location</ID>
+          <Name>X Location</Name>
+          <Source dwd:design-time-name="1be50dd5-06e2-4532-b371-2414ef06e8e7">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="99b8d868-fb22-4d15-b641-9faa4a176e71">
+              <TableID>dbo_Alert</TableID>
+              <ColumnID>XLocation</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="8d4161c2-37bd-4b0c-ac81-fa7ee58e5500">
+          <ID>Y Location</ID>
+          <Name>Y Location</Name>
+          <Source dwd:design-time-name="8784a098-2fd0-4ee2-ba5b-fba3f298e641">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="8b0658b8-b799-4f51-9663-662fc3a16a3d">
+              <TableID>dbo_Alert</TableID>
+              <ColumnID>YLocation</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="a9c4fdd5-e261-4a1b-81ca-61bcb7f11eb5">
+          <ID>Direction</ID>
+          <Name>Direction</Name>
+          <Source dwd:design-time-name="f76b4c0e-17b5-4b14-ade9-f6387fc0fc80">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="363a7a68-efd3-44da-8068-a67c18835e34">
+              <TableID>dbo_Alert</TableID>
+              <ColumnID>Direction</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="9536fecd-cf15-4604-8eda-ce7480c83268">
+          <ID>Is Loaded</ID>
+          <Name>Is Loaded</Name>
+          <Source dwd:design-time-name="43c0c982-55db-4fdc-b264-c2061b11b56a">
+            <DataType>UnsignedInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="f7b66b92-a585-431b-bb21-8658ecd3be18">
+              <TableID>dbo_Alert</TableID>
+              <ColumnID>IsLoaded</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="44cbfd61-8546-440d-a1e4-382d94481542">
+          <ID>Is Blocked</ID>
+          <Name>Is Blocked</Name>
+          <Source dwd:design-time-name="0e8fad87-3a68-4aa6-8453-9749e44166d0">
+            <DataType>UnsignedInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="0e4c52ed-b697-4752-8962-a1ab5b1f6a7e">
+              <TableID>dbo_Alert</TableID>
+              <ColumnID>IsBlocked</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="f6c9d0aa-a323-4d78-b376-0f43d446f190">
+          <ID>Job Id</ID>
+          <Name>Job Id</Name>
+          <Source dwd:design-time-name="01145b47-d8cb-42bd-8886-41998f69a40d">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="36ad49ef-978a-46d1-a055-3a701d34d2f4">
+              <TableID>dbo_Alert</TableID>
+              <ColumnID>JobId</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="76c6726c-8322-482c-8ad3-3af8ccea4777">
+          <ID>Alert Count</ID>
+          <Name>Alert Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="1785a018-288a-4dcc-8581-6b89253a6c68">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="9a0307e5-906b-4f9d-b3f6-72a27397a681">
+              <TableID>dbo_Alert</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="82068f2c-d825-42c8-bc25-0d204cf47c1f">
+          <CubeDimensionID>AGV</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="69107e6f-fb14-4452-94ca-9f4e8c57aa8d">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="ca636d32-08f9-4b34-aa74-98e73c22fb82">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="6a677742-60e7-4b23-bdd0-40f9b2de84ca">
+                    <TableID>dbo_Alert</TableID>
+                    <ColumnID>AgvId</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="45d08ded-cd8b-4973-88bd-286f5e304eac">
+          <CubeDimensionID>Alert Type</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="38c43dd6-23c0-4750-ab2f-9b03bff43070">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="c7bf8fe8-0344-4f6d-8b77-110fb475322c">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="3dbf2a27-cf05-4479-83de-140caf54f78a">
+                    <TableID>dbo_Alert</TableID>
+                    <ColumnID>AlertTypeId</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="51e75001-a5fc-44b9-b089-4140829726ec">
+          <CubeDimensionID>Speed</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="894d9a70-2315-4ca3-bd82-c8bf5821c799">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="0e8dcb43-3e6e-4d97-94f1-3a8c18cf42b3">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="d4ab341f-7471-418c-849b-42f2bef6e480">
+                    <TableID>dbo_Alert</TableID>
+                    <ColumnID>SpeedId</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="e7420c6e-55af-4ae4-bea3-4ceafb9194b5">
+      <ID>Alert Type</ID>
+      <Name>Alert Type</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="bc971f6a-ff31-410d-8f53-87e65840891d">
+          <ID>Is Environmental</ID>
+          <Name>Is Environmental</Name>
+          <Source dwd:design-time-name="f26e736d-7308-4047-8db7-08dcedd03ffe">
+            <DataType>UnsignedInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="3395254a-ad24-48bc-ad80-30193a8c2340">
+              <TableID>dbo_AlertType</TableID>
+              <ColumnID>IsEnvironmental</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="9486a9b3-ba79-44ee-96d9-dfe740d29226">
+          <ID>Is Blocking</ID>
+          <Name>Is Blocking</Name>
+          <Source dwd:design-time-name="10ad2d30-5416-4bc8-99ab-5f2a818b33d6">
+            <DataType>UnsignedInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="5ebb2d36-8254-43cd-84f9-2bb6a844cae5">
+              <TableID>dbo_AlertType</TableID>
+              <ColumnID>IsBlocking</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="3e003a12-eced-466c-8577-93cc7cc23f1c">
+          <ID>Alert Type Count</ID>
+          <Name>Alert Type Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="d43f5505-2066-4544-afd3-331142777202">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="6d4c4539-3d44-4700-83a0-445d51407f71">
+              <TableID>dbo_AlertType</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="e7aed459-8fd5-4a0a-9bad-8606e44fd302">
+          <CubeDimensionID>Alert Type</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="6cad738f-9619-4b4f-abfd-87f35dbae7f1">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="73e56468-bb87-44a6-bebf-37a5394580cf">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="97c582e4-c515-4c8e-9357-d35c18858156">
+                    <TableID>dbo_AlertType</TableID>
+                    <ColumnID>Id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="8dacdf88-b600-413d-b5ed-295412d7928d">
+      <ID>Speed</ID>
+      <Name>Speed</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="a792cdec-d771-4ca8-b4d0-8975960183c3">
+          <ID>Speed</ID>
+          <Name>Speed</Name>
+          <Source dwd:design-time-name="69eb67bd-5ff3-4425-94d1-9b6ca1eebbc2">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="74160f23-a2b9-486e-9dbe-58eb64ca231f">
+              <TableID>dbo_Speed</TableID>
+              <ColumnID>Speed</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="b961514e-5dc1-453b-8f8c-d39e1672e492">
+          <ID>Speed Count</ID>
+          <Name>Speed Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="57ebe44c-0a61-4b27-af7a-6e1dc9ac1341">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="f3cc1761-7488-4448-8bad-0fe6fafe2610">
+              <TableID>dbo_Speed</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="42c7cc44-c7ff-4be3-b084-dfd9d6d98485">
+          <CubeDimensionID>Speed</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="c3b15bf6-08a7-43bd-ac80-f90225a510aa">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="007ed7c9-e209-415c-a538-d763c87247f7">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="cc97c13f-ce1f-47bf-b55d-72df20ec7f2e">
+                    <TableID>dbo_Speed</TableID>
+                    <ColumnID>Id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="c95f5caa-19e5-43a6-8a28-f3dfc1241eaa">
+    <DataSourceViewID>AGV Data Warehouse</DataSourceViewID>
+  </Source>
+</Cube>
